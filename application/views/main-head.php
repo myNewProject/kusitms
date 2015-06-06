@@ -42,3 +42,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <link rel="shortcut icon" href="favicon.ico"/>
 </head>
 <!-- END HEAD -->
+<!-- BEGIN VIEW FLASHDATA -->
+	<?php
+	if ($this->session->flashdata('message')) { ?>
+	<script>
+		alert('<?=$this->session->flashdata('message') ?>');
+	</script>
+	<? }
+	?>
+<!-- END VIEW FLASHDATA -->

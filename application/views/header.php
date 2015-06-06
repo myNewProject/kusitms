@@ -55,3 +55,13 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- DOC: Apply "page-footer-fixed" class to the body element to have fixed footer -->
 <!-- DOC: Apply "page-sidebar-reversed" class to put the sidebar on the right side -->
 <!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
+
+<!-- BEGIN VIEW FLASHDATA -->
+	<?php
+	if ($this->session->flashdata('message')) { ?>
+	<script>
+		alert('<?=$this->session->flashdata('message') ?>');
+	</script>
+	<? }
+	?>
+<!-- END VIEW FLASHDATA -->

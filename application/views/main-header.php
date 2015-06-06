@@ -73,7 +73,7 @@
 												<h3>공지사항</h3>
 											</li>
 											<li>
-												<a href="layout_horizontal_menu2.html">
+												<a href="<?=site_url('/Hello/notice')?>/main_notice">
 												<i class="fa fa-angle-right"></i>학회 공지 </a>
 											</li>
 											<li>
@@ -243,6 +243,47 @@
 											<li>
 												<a href="layout_sidebar_fixed.html">
 												<i class="fa fa-angle-right"></i>10기</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li class="mega-menu-dropdown">
+					<a data-toggle="dropdown" href="javascript:;" class="dropdown-toggle" data-hover="megamenu-dropdown" data-close-others="true">
+					동문회 <i class="fa fa-angle-down"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<!-- Content container to add padding -->
+							<div class="mega-menu-content">
+								<div class="row">
+									<div class="col-md-12">
+										<ul class="mega-menu-submenu">
+											<li>
+												<h3>동문회</h3>
+											</li>
+											<li>
+												<a href="<?=site_url('/Hello')?>">
+												<i class="fa fa-angle-right"></i>동문회소개 <span class="badge badge-roundless badge-danger">new</span></a>
+											</li>
+											<li>
+												<a href="<?=site_url('/Hello')?>">
+												<i class="fa fa-angle-right"></i>조직도</a>
+											</li>
+											<li>
+												<a href="<?=site_url('/Hello')?>">
+												<i class="fa fa-angle-right"></i>동문회 공지 <span class="badge badge-roundless badge-warning">update</span></a>
+											</li>
+											<li>
+												<a href="<?=site_url('/Hello')?>">
+												<i class="fa fa-angle-right"></i>멘토링</a>
+											</li>
+											<li>
+												<a href="<?=site_url('/Hello')?>">
+												<i class="fa fa-angle-right"></i>동문회에게 질문</a>
 											</li>
 										</ul>
 									</div>
@@ -686,11 +727,11 @@
 							</ul>
 						</li>
 						<li>
-							<a href="<?=site_url('/Hello/about/organization')?>">
+							<a href="#">
 							공지사항 <span class="arrow"></span></a>
 							<ul class="sub-menu">
 								<li class="active">
-									<a href="#">
+									<a href="<?=site_url('/Hello/notice')?>/main_notice">
 									학회 공지 </a>
 								</li>
 								<li>
@@ -854,6 +895,42 @@
 								<li>
 									<a href="index.html">
 									10기 </a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a>
+					동문회 <span class="arrow">
+					</span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="javascript:;">
+							동문회 <span class="arrow">
+							</span>
+							</a>
+							<ul class="sub-menu">
+								<li>
+									<a href="#">
+									동문회 소개 </a>
+								</li>
+								<li>
+									<a href="index.html">
+									조직도 </a>
+								</li>
+								<li>
+									<a href="index.html">
+									동문회 공지 </a>
+								</li>
+								<li>
+									<a href="index.html">
+									멘토링 </a>
+								</li>
+								<li>
+									<a href="index.html">
+									동문회에게 질문 </a>
 								</li>
 							</ul>
 						</li>

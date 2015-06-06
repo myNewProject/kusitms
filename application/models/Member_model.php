@@ -1,5 +1,5 @@
 <?php
-class Test_model extends CI_Model{
+class Member_model extends CI_Model{
  
     function __construct()
     {
@@ -12,8 +12,8 @@ class Test_model extends CI_Model{
         return $this->db->query($strQuery)->result();
     }
  
-    function get1($seq){
-        $strQuery = "SELECT * FROM about_us where seq = " . $seq;
+    function get_member ($seq){
+         $strQuery = "SELECT id, name, university, email, class, ment FROM users WHERE class in('학회장', '부학회장', '교육팀장', '경영총괄팀장', '대외홍보팀장') AND member = ".$seq;
  
         return $this->db->query($strQuery)->result();
     }

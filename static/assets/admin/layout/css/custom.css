@@ -1,5 +1,14 @@
 /* here you can put your own css to customize and override the theme */
 
+.carousel-custom {
+	background-color:#333333; 
+	opacity: 0.75;
+	filter: alpha(opacity = 75); // IE6,7
+			-ms-filter: “alpha (opacity=75)”; // IE8
+			-moz-opacity: 0.75; // Firefox 1.5
+			-khtml-opacity: 0.75; // Safari 1.x
+			zoom: 1; 
+}								
 /***
 Rounded Portlets
 ***/

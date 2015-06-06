@@ -1,3 +1,5 @@
+<link href="<?=site_url('/static')?>/assets/admin/pages/css/about-us.css" rel="stylesheet" type="text/css"/>
+
 	<!-- BEGIN CONTENT -->
 	<div class="page-content-wrapper">
 		<div class="page-content">
@@ -47,7 +49,7 @@
 				<h3>임원진 소개</h3>
 			</div>
 			<div class="row thumbnails">
-			<? foreach ($test_item as $each_item) {
+			<? foreach ($member_item as $each_item) {
 				
 				?>	
 				<div class="col-md-3">
@@ -95,4 +97,3 @@
 		</div>
 	</div>
 	<!-- END CONTENT -->
-	
