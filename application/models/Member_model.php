@@ -27,15 +27,16 @@ class Member_model extends CI_Model{
     }
 	
     function add($option) {
-        $this->db->set('name', $option['nickname']);
-        $this->db->set('password', $option['password']);
+        $this->db->set('name', $option['name']);
+        $this->db->set('pass', $option['password']);
         $this->db->set('university', $option['university']);
         $this->db->set('email', $option['email']);
+        $this->db->set('class', $option['class']);
         $this->db->set('phone', $option['phone']);
         $this->db->set('ment', $option['ment']);
-        //$this->db->set('picture', $option['picture']);
+        $this->db->set('member', $option['member']);
+        $this->db->set('picture', $option['picture']);
         $this->db->set('age', $option['age']);
-        $this->db->set('created', 'NOW()', false);
         $this->db->insert('users');
         $result = $this->db->insert_id();
         return $result;

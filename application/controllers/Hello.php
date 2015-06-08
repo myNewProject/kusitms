@@ -297,11 +297,10 @@ class Hello extends MY_Controller {
 
 		if (!$this->session->userdata('postAuth')) {
 			$this->session->set_flashdata('message', '권한이 없습니다');
-			// 이전페이지로 보내는 코드
+			redirect($_SERVER['HTTP_REFERER']);
 		}
 
 		$this->_header('main-header');
-
 		$this->load->library('form_validation');
 		
 		$this->form_validation->set_rules('title', '제목', 'required');
