@@ -12,13 +12,29 @@ class Notice_model extends CI_Model{
         return $this->db->query($strQuery)->result();
     }
 
-    function add($category, $title, $content, $writer) {
+//    function add($category, $title, $content, $writer) {
+    function add($category, $title, $content) {
         $this->db->set('postDate', 'CURRENT_TIMESTAMP()', false);
         $this->db->insert('notice_board', array(
             'category'=>$category,
             'title'=>$title,
             'content'=>$content,
-            'writer'=>$writer
+            'writer'=>'tester'
+        ));
+        
+        return $this->db->insert_id();
+    }
+
+//    function add($category, $title, $content, $writer, $attachment_org, $attachment_file) {
+    function addFile($category, $title, $content, $attachment_org, $attachment_file) {
+        $this->db->set('postDate', 'CURRENT_TIMESTAMP()', false);
+        $this->db->insert('notice_board', array(
+            'category'=>$category,
+            'title'=>$title,
+            'content'=>$content,
+            'writer'=>'tester',
+            'attachment_org'=>$attachment_org,
+            'attachment_file'=>$attachment_file
         ));
         
         return $this->db->insert_id();

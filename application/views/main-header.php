@@ -15,7 +15,7 @@
 	<div class="page-header-inner">
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
-			<a href="index.html">
+			<a href="<?=site_url('/Hello')?>">
 			<img src="<?=site_url('/static')?>/assets/admin/layout/img/logo.png" alt="logo" class="logo-default"/>
 			</a>
 		</div>
@@ -91,6 +91,10 @@
 											<li>
 												<a href="layout_sidebar_search_option2.html">
 												<i class="fa fa-angle-right"></i>활동일지 </a>
+											</li>
+											<li>
+												<a href="<?=site_url('/Hello/add')?>">
+												<i class="fa fa-angle-right"></i>공지 작성 </a>
 											</li>
 										</ul>
 									</div>
@@ -312,7 +316,10 @@
 		<!-- END RESPONSIVE MENU TOGGLER -->
 		<!-- BEGIN TOP NAVIGATION MENU -->
 		<div class="top-menu">
+			<!-- BEGIN LOGIN FORM -->
 			<ul class="nav navbar-nav pull-right">
+			<?php 
+			if ($this->session->userdata('is_login')) {	?>
 				<!-- BEGIN NOTIFICATION DROPDOWN -->
 				<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
 				<li class="dropdown dropdown-extended dropdown-notification" id="header_notification_bar">
@@ -614,9 +621,9 @@
 				<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
 				<li class="dropdown dropdown-user">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-					<img alt="" class="img-circle" src="<?=site_url('/static')?>/assets/admin/layout/img/avatar3_small.jpg"/>
+					<img alt="" class="img-circle" src="<? echo site_url('/static/img/member').'/'.$this->session->userdata('userpic');?>"/>
 					<span class="username username-hide-on-mobile">
-					Nick </span>
+					<?=$this->session->userdata('username')?> </span>
 					<i class="fa fa-angle-down"></i>
 					</a>
 					<ul class="dropdown-menu dropdown-menu-default">
@@ -647,15 +654,67 @@
 							<i class="icon-lock"></i> Lock Screen </a>
 						</li>
 						<li>
-							<a href="login.html">
+							<a href="<?=site_url('/')?>auth/logout">
 							<i class="icon-key"></i> Log Out </a>
 						</li>
 					</ul>
 				</li>
 				<!-- END USER LOGIN DROPDOWN -->
+			<?php
+			} else {	?>
+				<li class="classic-menu-dropdown">
+					<a data-toggle="modal" href="#login_form">LOGIN</a>
+					<div class="modal fade" id="login_form" role="dialog" aria-labelledby="login_title" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									<div class="modal-title" id="login_title">
+										<h3>로그인</h3>
+									</div>
+								</div>
+								<div class="modal-body">
+									<div class="container-fluid">
+										<div class="row">
+										<form class="form-horizontal" method="post" action="<?=site_url('/')?>auth/authentication<?=empty($returnURL) ? '' : '?returnURL='.rawurlencode($returnURL) ?>">	
+											<div class="form-group">
+												<label class="control-label col-sm-2" for="inputEmail">아이디</label>
+												<div class="col-sm-10">
+													<input class="form-control" type="text" id="email" name="email" placeholder="이메일">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-2" for="inputPassword">비밀번호</label>
+												<div class="col-sm-10">
+													<input class="form-control" type="password" id="password" name="password" placeholder="비밀번호">
+												</div>
+											</div>
+										
+											<div class="modal-footer">
+												<button type="submit" class="btn btn-primary">로그인</button>
+											</div>
+										</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+							
+				</li>
+				<li class="mega-menu-dropdown">
+					<a href="<?=site_url('/Auth/register')?>">JOIN US</a>
+				</li>
+			<?php
+			}
+			?>
+			<!-- END LOGIN FORM -->
 			</ul>
 		</div>
 		<!-- END TOP NAVIGATION MENU -->
+
 	</div>
 	<!-- END HEADER INNER -->
 </div>

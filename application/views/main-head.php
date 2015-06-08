@@ -35,8 +35,8 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN THEME STYLES -->
 <link href="<?=site_url('/static')?>/assets/global/css/components.css" id="style_components" rel="stylesheet" type="text/css"/>
 <link href="<?=site_url('/static')?>/assets/global/css/plugins.css" rel="stylesheet" type="text/css"/>
-<link href="<?=site_url('/static')?>/assets/admin/layout/css/layout.css" rel="stylesheet" type="text/css"/>
-<link id="style_color" href="<?=site_url('/static')?>/assets/admin/layout/css/themes/grey.css" rel="stylesheet" type="text/css"/>
+<link href="<?=site_url('/static')?>/assets/admin/layout/css/layout_custom.css" rel="stylesheet" type="text/css"/>
+<link id="style_color" href="<?=site_url('/static')?>/assets/admin/layout/css/themes/grey_custom.css" rel="stylesheet" type="text/css"/>
 <link href="<?=site_url('/static')?>/assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
 <!-- END THEME STYLES -->
 <link rel="shortcut icon" href="favicon.ico"/>

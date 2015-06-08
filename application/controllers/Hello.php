@@ -173,8 +173,7 @@ class Hello extends MY_Controller {
 				break;
 
 			default:
-				$test_item = $this->test_model->gets();
-				$this->load->view('about', array('test_item'=>$test_item));
+				$this->load->view('main_notice');
 				break;
 		}
 		$this->_footer('main-footer');
@@ -288,6 +287,86 @@ class Hello extends MY_Controller {
 				break;
 		}
 		$this->_footer('main-footer');
+	}
+
+	public function add() {
+		if (!$this->session->userdata('is_login')) {
+			$this->session->set_flashdata('message', '로그인이 필요한 서비스 입니다.');
+			redirect('/Auth/login?returnURL='.rawurlencode(site_url('/Hello/add')));
+		}
+
+		if (!$this->session->userdata('postAuth')) {
+			$this->session->set_flashdata('message', '권한이 없습니다');
+			// 이전페이지로 보내는 코드
+		}
+
+		$this->_header('main-header');
+
+		$this->load->library('form_validation');
+		
+		$this->form_validation->set_rules('title', '제목', 'required');
+		$this->form_validation->set_rules('contentArea', '본문', 'required');
+		
+		if ($this->form_validation->run() == FALSE) {
+			$this->load->view('addNotice');
+		} else {
+			$this->load->model('notice_model');
+
+			if (! $file = $this->upload_receive('attachment')) { // 첨부파일이 없을경우
+				$this->notice_model->add($this->input->post('category'), $this->input->post('title'), $this->input->post('contentArea'));
+			} else {
+				$this->notice_model->addFile($this->input->post('category'), $this->input->post('title'), $this->input->post('contentArea'), $file['orig_name'], $file['file_name']);
+			}
+			$this->session->set_flashdata('message', '게시글 작성 성공');
+
+			redirect(site_url('/Hello/notice/main_notice'));
+		}
+
+		$this->_footer('main-footer');
+	}
+
+	public function upload_form() {
+		// 사용자가 업로드 한 파일을 /static/user/ 디렉토리에 저장한다.
+		$config['upload_path'] = './static/img/addNotice';
+		// git,jpg,png 파일만 업로드를 허용한다.
+		$config['allowed_types'] = 'gif|jpg|png';
+		$this->load->library('upload', $config);
+
+		if(! $this->upload->do_upload("upload")) {
+			echo $this->upload->display_errors();
+			echo "<script>alert('업로드에 실패 했습니다. ".$this->upload->display_errors('','')."')</script>";
+		} else {
+			$CKEditorFuncNum = $this->input->get('CKEditorFuncNum');
+		
+			$data = $this->upload->data();
+			$filename = $data['file_name'];
+
+			$url = site_url('/static').'/img/addNotice/'.$filename;
+			iconv("UTF-8","EUC-KR",$url);
+			
+			echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction('".$CKEditorFuncNum."', '".$url."', '전송이 성공 했습니다.')</script>";
+		}
+	}
+
+	public function upload_receive($file_name) {
+		// 사용자가 업로드 한 파일을 /static/user/ 디렉토리에 저장한다.
+		$config['upload_path'] = './static/user';
+		// 허용되는 파일의 최대 사이즈 (100MB)
+		$config['max_size'] = '102400';
+		// 허용되는 파일 종류 All
+		$config['allowed_types'] = '*';
+		// 파일명 암호화 True
+		$config['encrypt_name'] = TRUE;
+		
+		$this->load->library('upload', $config);
+
+		if(! $this->upload->do_upload($file_name)) {
+			
+		} else {
+			$data = $this->upload->data();
+		}
+		
+		return $data;
 	}
 }
 ?>

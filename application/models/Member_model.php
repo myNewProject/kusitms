@@ -26,15 +26,25 @@ class Member_model extends CI_Model{
         return $this->db->get_where('about_us',array('seq'=>$seq))->row();
     }
 	
-	function add($title, $description) {
-		$this->db->set('regdate', 'NOW()', false);
-		$this->db->insert('about_us', array(
-			'title'=>$title,
-			'contents'=>$description
-		));
-		
-		return $this->db->insert_id();
-	}
+    function add($option) {
+        $this->db->set('name', $option['nickname']);
+        $this->db->set('password', $option['password']);
+        $this->db->set('university', $option['university']);
+        $this->db->set('email', $option['email']);
+        $this->db->set('phone', $option['phone']);
+        $this->db->set('ment', $option['ment']);
+        //$this->db->set('picture', $option['picture']);
+        $this->db->set('age', $option['age']);
+        $this->db->set('created', 'NOW()', false);
+        $this->db->insert('users');
+        $result = $this->db->insert_id();
+        return $result;
+    }
+
+    function getByEmail($option) {
+        $result = $this->db->get_where('users', array('email'=>$option['email']))->row();
+        return $result;
+    }
  
 }
 ?>
