@@ -17,7 +17,7 @@
 						<i class="fa fa-angle-right"></i>
 					</li>
 					<li>
-						<a href="<?=site_url('/Hello/notice')?>/main_notice">학회 공지</a>
+						<a href="<?=site_url('/Hello/add')?>">공지 작성</a>
 					</li>
 				</ul>
 			</div>

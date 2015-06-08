@@ -325,7 +325,7 @@ class Hello extends MY_Controller {
 	}
 
 	public function upload_form() {
-		// 사용자가 업로드 한 파일을 /static/user/ 디렉토리에 저장한다.
+		// 사용자가 업로드 한 파일을 /static/img/addNotice 디렉토리에 저장한다.
 		$config['upload_path'] = './static/img/addNotice';
 		// git,jpg,png 파일만 업로드를 허용한다.
 		$config['allowed_types'] = 'gif|jpg|png';

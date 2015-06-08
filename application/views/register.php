@@ -13,11 +13,11 @@
 					<i class="fa fa-angle-right"></i>
 				</li>
 				<li>
-					<a href="<?=site_url('/Hello/about/about')?>">소 개</a>
+					<a href="<?=site_url('/Hello/Auth/register')?>">등록</a>
 					<i class="fa fa-angle-right"></i>
 				</li>
 				<li>
-					<a href="<?=site_url('/Hello/about/about')?>">학회 소개</a>
+					<a href="<?=site_url('/Hello/Auth/register')?>">회원가입</a>
 				</li>
 			</ul>
 		</div>

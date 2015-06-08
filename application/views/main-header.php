@@ -101,7 +101,7 @@
 									<div class="col-md-4">
 										<ul class="mega-menu-submenu">
 											<li>
-												<h3>동문회</h3>
+												<h3>동문회(개발중)</h3>
 											</li>
 											<li>
 												<a href="<?=site_url('/Hello')?>">
@@ -799,7 +799,7 @@
 						</li><?=site_url('/Hello')?>
 						<li>
 							<a href="#">
-							동문회 <span class="arrow"></span></a>
+							동문회(개발중) <span class="arrow"></span></a>
 							<ul class="sub-menu">
 								<li>
 									<a href="<?=site_url('/Hello')?>/main_notice">

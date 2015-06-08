@@ -84,21 +84,21 @@
 								교육 일정 News </span>
 								<em>
 								<i class="fa fa-tags"></i>
-								USA, Business, Apple </em>
+								교육팀 주관 매주토요일 교육 </em>
 								<i class="fa fa- icon-bullhorn top-news-icon"></i>
 								</a>
 							</div>
 							<div class="news-blocks">
 								<h3>
 								<a href="page_news_item.html">
-								Google Glass Technology.. </a>
+								교육일정 제목 </a>
 								</h3>
 								<div class="news-block-tags">
-									<strong>CA, USA</strong>
+									<strong>숭실대학교, 조만식기념관, 209호</strong>
 									<em>3 hours ago</em>
 								</div>
 								<p>
-									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image1.jpg" alt="">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image1.jpg" alt="">교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
 								</p>
 								<a href="page_news_item.html" class="news-block-btn">
 								Read more <i class="m-icon-swapright m-icon-black"></i>
@@ -107,14 +107,14 @@
 							<div class="news-blocks">
 								<h3>
 								<a href="page_news_item.html">
-								Sint occaecati cupiditat </a>
+								교육일정 제목 </a>
 								</h3>
 								<div class="news-block-tags">
 									<strong>London, UK</strong>
 									<em>7 hours ago</em>
 								</div>
 								<p>
-									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image4.jpg" alt="">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image4.jpg" alt="">교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
 								</p>
 								<a href="page_news_item.html" class="news-block-btn">
 								Read more <i class="m-icon-swapright m-icon-black"></i>
@@ -123,14 +123,14 @@
 							<div class="news-blocks">
 								<h3>
 								<a href="page_news_item.html">
-								Accusamus et iusto odio </a>
+								교육일정 제목 </a>
 								</h3>
 								<div class="news-block-tags">
 									<strong>CA, USA</strong>
 									<em>3 hours ago</em>
 								</div>
 								<p>
-									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image5.jpg" alt="">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image5.jpg" alt="">교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
 								</p>
 								<a href="page_news_item.html" class="news-block-btn">
 								Read more <i class="m-icon-swapright m-icon-black"></i>
@@ -146,21 +146,21 @@
 								멘토링 News </span>
 								<em>
 								<i class="fa fa-tags"></i>
-								UK, Canada, Asia </em>
+								동문회 주관 멘토링 </em>
 								<i class="fa fa-globe top-news-icon"></i>
 								</a>
 							</div>
 							<div class="news-blocks">
 								<h3>
 								<a href="page_news_item.html">
-								Odio dignissimos ducimus </a>
+								멘토링 제목 </a>
 								</h3>
 								<div class="news-block-tags">
 									<strong>Berlin, Germany</strong>
 									<em>2 hours ago</em>
 								</div>
 								<p>
-									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image3.jpg" alt="">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image3.jpg" alt="">교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
 								</p>
 								<a href="page_news_item.html" class="news-block-btn">
 								Read more <i class="m-icon-swapright m-icon-black"></i>
@@ -169,14 +169,14 @@
 							<div class="news-blocks">
 								<h3>
 								<a href="page_news_item.html">
-								Sanditiis praesentium vo </a>
+								멘토링 제목 </a>
 								</h3>
 								<div class="news-block-tags">
 									<strong>Ankara, Turkey</strong>
 									<em>5 hours ago</em>
 								</div>
 								<p>
-									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image5.jpg" alt="">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint praesentium voluptatum delenitioccaecati cupiditate non provident
+									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image5.jpg" alt="">교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
 								</p>
 								<a href="page_news_item.html" class="news-block-btn">
 								Read more <i class="m-icon-swapright m-icon-black"></i>
@@ -188,21 +188,21 @@
 								동문회 News </span>
 								<em>
 								<i class="fa fa-tags"></i>
-								Money, Business, Google </em>
+								한국대학생IT경영학회 동문회 </em>
 								<i class="fa fa-briefcase top-news-icon"></i>
 								</a>
 							</div>
 							<div class="news-blocks">
 								<h3>
 								<a href="page_news_item.html">
-								Odio dignissimos ducimus </a>
+								동문회 공지사항 제목 </a>
 								</h3>
 								<div class="news-block-tags">
 									<strong>Berlin, Germany</strong>
 									<em>2 hours ago</em>
 								</div>
 								<p>
-									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image3.jpg" alt="">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint non provident
+									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image3.jpg" alt="">교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
 								</p>
 								<a href="page_news_item.html" class="news-block-btn">
 								Read more <i class="m-icon-swapright m-icon-black"></i>
@@ -211,14 +211,14 @@
 							<div class="news-blocks">
 								<h3>
 								<a href="page_news_item.html">
-								Sanditiis praesentium vo </a>
+								동문회 공지사항 제목 </a>
 								</h3>
 								<div class="news-block-tags">
 									<strong>Ankara, Turkey</strong>
 									<em>5 hours ago</em>
 								</div>
 								<p>
-									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image5.jpg" alt="">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint praesentium voluptatum delenitioccaecati cupiditate non provident
+									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image5.jpg" alt="">교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
 								</p>
 								<a href="page_news_item.html" class="news-block-btn">
 								Read more <i class="m-icon-swapright m-icon-black"></i>
@@ -233,21 +233,21 @@
 								학회 공고 </span>
 								<em>
 								<i class="fa fa-tags"></i>
-								Hi-Tech, Medicine, Space </em>
+								한국대학생IT경영학회 공지사항 </em>
 								<i class="fa fa-beaker top-news-icon"></i>
 								</a>
 							</div>
 							<div class="news-blocks">
 								<h3>
 								<a href="page_news_item.html">
-								Vero eos et accusam </a>
+								학회 공지사항 제목 </a>
 								</h3>
 								<div class="news-block-tags">
 									<strong>CA, USA</strong>
 									<em>3 hours ago</em>
 								</div>
 								<p>
-									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image2.jpg" alt="">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image2.jpg" alt="">교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
 								</p>
 								<a href="page_news_item.html" class="news-block-btn">
 								Read more <i class="m-icon-swapright m-icon-black"></i>
@@ -256,14 +256,14 @@
 							<div class="news-blocks">
 								<h3>
 								<a href="page_news_item.html">
-								Sias excepturi sint occae </a>
+								학회 공지사항 제목 </a>
 								</h3>
 								<div class="news-block-tags">
 									<strong>Vancouver, Canada</strong>
 									<em>3 hours ago</em>
 								</div>
 								<p>
-									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image4.jpg" alt="">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image4.jpg" alt="">교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
 								</p>
 								<a href="page_news_item.html" class="news-block-btn">
 								Read more <i class="m-icon-swapright m-icon-black"></i>
@@ -275,21 +275,21 @@
 								언론보도 </span>
 								<em>
 								<i class="fa fa-tags"></i>
-								Football, Swimming, Tennis </em>
+								학회 외부 언론 보도자료 </em>
 								<i class="fa fa-trophy top-news-icon"></i>
 								</a>
 							</div>
 							<div class="news-blocks">
 								<h3>
 								<a href="page_news_item.html">
-								Vero eos et accusam </a>
+								보도자료 기사 제목 </a>
 								</h3>
 								<div class="news-block-tags">
 									<strong>CA, USA</strong>
 									<em>3 hours ago</em>
 								</div>
 								<p>
-									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image2.jpg" alt="">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image2.jpg" alt="">교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
 								</p>
 								<a href="page_news_item.html" class="news-block-btn">
 								Read more <i class="m-icon-swapright m-icon-black"></i>
@@ -300,7 +300,7 @@
 					</div>
 					<div class="space20">
 					</div>
-					<h3>News Option</h3>
+					<h3>IT 관련 뉴스</h3>
 					<div class="row">
 						<div class="col-md-3">
 							<div class="news-blocks">
@@ -313,7 +313,7 @@
 									<em>2 hours ago</em>
 								</div>
 								<p>
-									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image5.jpg" alt="">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image5.jpg" alt="">교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
 								</p>
 								<a href="page_news_item.html" class="news-block-btn">
 								Read more <i class="m-icon-swapright m-icon-black"></i>
@@ -329,7 +329,7 @@
 									<em>6 hours ago</em>
 								</div>
 								<p>
-									 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+									 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
 								</p>
 								<a href="page_news_item.html" class="news-block-btn">
 								Read more <i class="m-icon-swapright m-icon-black"></i>
@@ -348,7 +348,7 @@
 									<em>3 hours ago</em>
 								</div>
 								<p>
-									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image3.jpg" alt="">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image3.jpg" alt="">교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
 								</p>
 								<a href="page_news_item.html" class="news-block-btn">
 								Read more <i class="m-icon-swapright m-icon-black"></i>
@@ -364,7 +364,7 @@
 									<em>3 hours ago</em>
 								</div>
 								<p>
-									 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+									 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
 								</p>
 								<a href="page_news_item.html" class="news-block-btn">
 								Read more <i class="m-icon-swapright m-icon-black"></i>
@@ -385,7 +385,7 @@
 											<em>3 hours ago</em>
 										</div>
 										<p>
-											<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image2.jpg" alt="">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident iti..
+											<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image2.jpg" alt="">교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
 										</p>
 										<a href="page_news_item.html" class="news-block-btn">
 										Read more <i class="m-icon-swapright m-icon-black"></i>
@@ -405,7 +405,7 @@
 											<em>3 hours ago</em>
 										</div>
 										<p>
-											 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+											 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
 										</p>
 										<a href="page_news_item.html" class="news-block-btn">
 										Read more <i class="m-icon-swapright m-icon-black"></i>
@@ -423,7 +423,7 @@
 											<em>3 hours ago</em>
 										</div>
 										<p>
-											 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+											 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
 										</p>
 										<a href="page_news_item.html" class="news-block-btn">
 										Read more <i class="m-icon-swapright m-icon-black"></i>
@@ -433,117 +433,6 @@
 							</div>
 						</div>
 						<!--end col-md-6-->
-					</div>
-					<div class="space20">
-					</div>
-					<h3>News Feeds</h3>
-					<div class="row">
-						<div class="col-md-3">
-							<div class="top-news">
-								<a href="#" class="btn red">
-								<span>
-								Metronic News </span>
-								<em>Posted on: April 16, 2013</em>
-								<em>
-								<i class="fa fa-tags"></i>
-								Money, Business, Google </em>
-								<i class="fa fa-briefcase top-news-icon"></i>
-								</a>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="top-news">
-								<a href="#" class="btn green">
-								<span>
-								Top Week </span>
-								<em>Posted on: April 15, 2013</em>
-								<em>
-								<i class="fa fa-tags"></i>
-								Internet, Music, People </em>
-								<i class="fa fa-music top-news-icon"></i>
-								</a>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="top-news">
-								<a href="#" class="btn blue">
-								<span>
-								Gold Price Falls </span>
-								<em>Posted on: April 14, 2013</em>
-								<em>
-								<i class="fa fa-tags"></i>
-								USA, Business, Apple </em>
-								<i class="fa fa-globe top-news-icon"></i>
-								</a>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="top-news">
-								<a href="#" class="btn yellow">
-								<span>
-								Study Abroad </span>
-								<em>Posted on: April 13, 2013</em>
-								<em>
-								<i class="fa fa-tags"></i>
-								Education, Students, Canada </em>
-								<i class="fa fa-book top-news-icon"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-3">
-							<div class="top-news">
-								<a href="#" class="btn green">
-								<span>
-								Top Week </span>
-								<em>Posted on: April 15, 2013</em>
-								<em>
-								<i class="fa fa-tags"></i>
-								Internet, Music, People </em>
-								<i class="fa fa-music top-news-icon"></i>
-								</a>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="top-news">
-								<a href="#" class="btn yellow">
-								<span>
-								Study Abroad </span>
-								<em>Posted on: April 13, 2013</em>
-								<em>
-								<i class="fa fa-tags"></i>
-								Education, Students, Canada </em>
-								<i class="fa fa-book top-news-icon"></i>
-								</a>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="top-news">
-								<a href="#" class="btn red">
-								<span>
-								Metronic News </span>
-								<em>Posted on: April 16, 2013</em>
-								<em>
-								<i class="fa fa-tags"></i>
-								Money, Business, Google </em>
-								<i class="fa fa-briefcase top-news-icon"></i>
-								</a>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="top-news">
-								<a href="#" class="btn blue">
-								<span>
-								Gold Price Falls </span>
-								<em>Posted on: April 14, 2013</em>
-								<em>
-								<i class="fa fa-tags"></i>
-								USA, Business, Apple </em>
-								<i class="fa fa-globe top-news-icon"></i>
-								</a>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>

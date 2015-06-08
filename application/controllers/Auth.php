@@ -51,7 +51,7 @@ class Auth extends MY_Controller {
         'age'=>$this->input->post('age')
         ));
       $this->session->set_flashdata('message', '회원가입에 성공했습니다.');
-      redirect($_SERVER['HTTP_REFERER']);
+      redirect(site_url('/Hello'));
     }
 
 
@@ -87,11 +87,11 @@ class Auth extends MY_Controller {
   }
 
   public function upload_receive($file_name) {
-    // 사용자가 업로드 한 파일을 /static/user/ 디렉토리에 저장한다.
+    // 사용자가 업로드 한 파일을 /static/img/member 디렉토리에 저장한다.
     $config['upload_path'] = './static/img/member';
     // 허용되는 파일의 최대 사이즈 (100MB)
     $config['max_size'] = '102400';
-    // 허용되는 파일 종류 All
+    // 허용되는 파일 종류 'gif|jpg|png'
     $config['allowed_types'] = 'gif|jpg|png';
     // 파일명 암호화 True
     $config['encrypt_name'] = TRUE;
