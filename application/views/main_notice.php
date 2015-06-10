@@ -79,7 +79,7 @@
 						<!-- begin col-md-4 -->
 						<div class='col-md-4'>
 							<div class='top-news margin-top-10'>
-								<a href='#' class='btn blue'>
+								<a href='<?=site_url('/Notice')?>/edu_schedule' class='btn blue'>
 								<span>
 								교육 일정 News </span>
 								<em>
@@ -122,7 +122,7 @@
 						<!--end col-md-4-->
 						<div class="col-md-4">
 							<div class="top-news margin-top-10">
-								<a href="#" class="btn purple">
+								<a href="<?=site_url('/Notice')?>/kusitms_notice" class="btn purple">
 								<span>
 								학회 공고 </span>
 								<em>
@@ -135,7 +135,7 @@
 							<button type="button" class="btn btn-primary" href="#">학회 공지 보기</button>
 
 							<div class="top-news margin-top-10">
-								<a href="#" class="btn yellow">
+								<a href="<?=site_url('/Notice')?>/abroad_notice" class="btn yellow">
 								<span>
 								언론보도 </span>
 								<em>
