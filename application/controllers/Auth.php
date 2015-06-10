@@ -69,6 +69,7 @@ class Auth extends MY_Controller {
       // 세션 정보 세팅
       $this->session->set_userdata('is_login', true);
       $this->session->set_userdata('username', $user->name);
+      $this->session->set_userdata('userid', $user->id);
       $this->session->set_userdata('userpic', $user->picture);
       if ($user->class === '학회장' || 
         $user->class === '부학회장' ||

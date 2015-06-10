@@ -15,11 +15,11 @@
 						<i class="fa fa-angle-right"></i>
 					</li>
 					<li>
-						<a href="<?=site_url('/Hello/notice')?>/main_notice">공지사항</a>
+						<a href="<?=site_url('/Notice')?>/main_notice">공지사항</a>
 						<i class="fa fa-angle-right"></i>
 					</li>
 					<li>
-						<a href="<?=site_url('/Hello/notice')?>/main_notice">학회 공지</a>
+						<a href="<?=site_url('/Notice')?>/main_notice">학회 공지</a>
 					</li>
 				</ul>
 			</div>
@@ -77,67 +77,20 @@
 						<div class="col-md-2"></div>
 						<!-- END CAROUSEL -->
 						<!-- begin col-md-4 -->
-						<div class="col-md-4">
-							<div class="top-news margin-top-10">
-								<a href="#" class="btn blue">
+						<div class='col-md-4'>
+							<div class='top-news margin-top-10'>
+								<a href='#' class='btn blue'>
 								<span>
 								교육 일정 News </span>
 								<em>
-								<i class="fa fa-tags"></i>
+								<i class='fa fa-tags'></i>
 								교육팀 주관 매주토요일 교육 </em>
-								<i class="fa fa- icon-bullhorn top-news-icon"></i>
+								<i class='fa fa- icon-bullhorn top-news-icon'></i>
 								</a>
 							</div>
-							<div class="news-blocks">
-								<h3>
-								<a href="page_news_item.html">
-								교육일정 제목 </a>
-								</h3>
-								<div class="news-block-tags">
-									<strong>숭실대학교, 조만식기념관, 209호</strong>
-									<em>3 hours ago</em>
-								</div>
-								<p>
-									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image1.jpg" alt="">교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
-								</p>
-								<a href="page_news_item.html" class="news-block-btn">
-								Read more <i class="m-icon-swapright m-icon-black"></i>
-								</a>
-							</div>
-							<div class="news-blocks">
-								<h3>
-								<a href="page_news_item.html">
-								교육일정 제목 </a>
-								</h3>
-								<div class="news-block-tags">
-									<strong>London, UK</strong>
-									<em>7 hours ago</em>
-								</div>
-								<p>
-									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image4.jpg" alt="">교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
-								</p>
-								<a href="page_news_item.html" class="news-block-btn">
-								Read more <i class="m-icon-swapright m-icon-black"></i>
-								</a>
-							</div>
-							<div class="news-blocks">
-								<h3>
-								<a href="page_news_item.html">
-								교육일정 제목 </a>
-								</h3>
-								<div class="news-block-tags">
-									<strong>CA, USA</strong>
-									<em>3 hours ago</em>
-								</div>
-								<p>
-									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image5.jpg" alt="">교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
-								</p>
-								<a href="page_news_item.html" class="news-block-btn">
-								Read more <i class="m-icon-swapright m-icon-black"></i>
-								</a>
-							</div>
+							<? echo $_eduSchedule; ?>
+							<button type="button" class="btn btn-primary" href="#">교육일정 보기</button>
 						</div>
-						
 						<!--end col-md-4-->
 						<div class="col-md-4">
 							<div class="top-news margin-top-10">
@@ -150,39 +103,10 @@
 								<i class="fa fa-globe top-news-icon"></i>
 								</a>
 							</div>
-							<div class="news-blocks">
-								<h3>
-								<a href="page_news_item.html">
-								멘토링 제목 </a>
-								</h3>
-								<div class="news-block-tags">
-									<strong>Berlin, Germany</strong>
-									<em>2 hours ago</em>
-								</div>
-								<p>
-									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image3.jpg" alt="">교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
-								</p>
-								<a href="page_news_item.html" class="news-block-btn">
-								Read more <i class="m-icon-swapright m-icon-black"></i>
-								</a>
-							</div>
-							<div class="news-blocks">
-								<h3>
-								<a href="page_news_item.html">
-								멘토링 제목 </a>
-								</h3>
-								<div class="news-block-tags">
-									<strong>Ankara, Turkey</strong>
-									<em>5 hours ago</em>
-								</div>
-								<p>
-									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image5.jpg" alt="">교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
-								</p>
-								<a href="page_news_item.html" class="news-block-btn">
-								Read more <i class="m-icon-swapright m-icon-black"></i>
-								</a>
-							</div>
-							<div class="top-news">
+							<? echo $_mento; ?>
+							<button type="button" class="btn btn-primary" href="#">멘토링 전체 보기</button>
+
+							<div class="top-news margin-top-10">
 								<a href="#" class="btn green">
 								<span>
 								동문회 News </span>
@@ -192,38 +116,8 @@
 								<i class="fa fa-briefcase top-news-icon"></i>
 								</a>
 							</div>
-							<div class="news-blocks">
-								<h3>
-								<a href="page_news_item.html">
-								동문회 공지사항 제목 </a>
-								</h3>
-								<div class="news-block-tags">
-									<strong>Berlin, Germany</strong>
-									<em>2 hours ago</em>
-								</div>
-								<p>
-									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image3.jpg" alt="">교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
-								</p>
-								<a href="page_news_item.html" class="news-block-btn">
-								Read more <i class="m-icon-swapright m-icon-black"></i>
-								</a>
-							</div>
-							<div class="news-blocks">
-								<h3>
-								<a href="page_news_item.html">
-								동문회 공지사항 제목 </a>
-								</h3>
-								<div class="news-block-tags">
-									<strong>Ankara, Turkey</strong>
-									<em>5 hours ago</em>
-								</div>
-								<p>
-									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image5.jpg" alt="">교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
-								</p>
-								<a href="page_news_item.html" class="news-block-btn">
-								Read more <i class="m-icon-swapright m-icon-black"></i>
-								</a>
-							</div>
+							<? echo $_afterSociety; ?>
+							<button type="button" class="btn btn-primary" href="#">동문회 공지 보기</button>
 						</div>
 						<!--end col-md-4-->
 						<div class="col-md-4">
@@ -237,39 +131,10 @@
 								<i class="fa fa-beaker top-news-icon"></i>
 								</a>
 							</div>
-							<div class="news-blocks">
-								<h3>
-								<a href="page_news_item.html">
-								학회 공지사항 제목 </a>
-								</h3>
-								<div class="news-block-tags">
-									<strong>CA, USA</strong>
-									<em>3 hours ago</em>
-								</div>
-								<p>
-									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image2.jpg" alt="">교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
-								</p>
-								<a href="page_news_item.html" class="news-block-btn">
-								Read more <i class="m-icon-swapright m-icon-black"></i>
-								</a>
-							</div>
-							<div class="news-blocks">
-								<h3>
-								<a href="page_news_item.html">
-								학회 공지사항 제목 </a>
-								</h3>
-								<div class="news-block-tags">
-									<strong>Vancouver, Canada</strong>
-									<em>3 hours ago</em>
-								</div>
-								<p>
-									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image4.jpg" alt="">교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
-								</p>
-								<a href="page_news_item.html" class="news-block-btn">
-								Read more <i class="m-icon-swapright m-icon-black"></i>
-								</a>
-							</div>
-							<div class="top-news">
+							<? echo $_notice; ?>
+							<button type="button" class="btn btn-primary" href="#">학회 공지 보기</button>
+
+							<div class="top-news margin-top-10">
 								<a href="#" class="btn yellow">
 								<span>
 								언론보도 </span>
@@ -279,25 +144,12 @@
 								<i class="fa fa-trophy top-news-icon"></i>
 								</a>
 							</div>
-							<div class="news-blocks">
-								<h3>
-								<a href="page_news_item.html">
-								보도자료 기사 제목 </a>
-								</h3>
-								<div class="news-block-tags">
-									<strong>CA, USA</strong>
-									<em>3 hours ago</em>
-								</div>
-								<p>
-									<img class="news-block-img pull-right" src="../../assets/admin/pages/media/gallery/image2.jpg" alt="">교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 교육 내용에 대한 자료 ~~~ 
-								</p>
-								<a href="page_news_item.html" class="news-block-btn">
-								Read more <i class="m-icon-swapright m-icon-black"></i>
-								</a>
-							</div>
+							<? echo $_extraBoard; ?>
+							<button type="button" class="btn btn-primary" href="#">보도 자료 보기</button>
 						</div>
 						<!--end col-md-4-->
 					</div>
+					
 					<div class="space20">
 					</div>
 					<h3>IT 관련 뉴스</h3>

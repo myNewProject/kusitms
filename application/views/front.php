@@ -2,7 +2,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12 coming-soon-header">
-			<a class="brand" href="index.html">
+			<a class="brand" href="#">
 			<img src="<?=site_url('/static')?>/assets/admin/layout/img/logo-big.png" alt="logo"/>
 			</a>
 		</div>

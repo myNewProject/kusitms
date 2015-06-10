@@ -55,7 +55,11 @@
 											</li>
 											<li>
 												<a href="<?=site_url('/Hello/about/management')?>">
-												<i class="fa fa-angle-right"></i>운영진 구성 <span class="badge badge-roundless badge-warning">update</span></a>
+												<i class="fa fa-angle-right"></i>운영진 소개 <span class="badge badge-roundless badge-warning">update</span></a>
+											</li>
+											<li>
+												<a href="<?=site_url('/Hello/about/history')?>">
+												<i class="fa fa-angle-right"></i>히스토리</a>
 											</li>
 											<li>
 												<a href="<?=site_url('/Hello/about/aoa')?>">
@@ -73,27 +77,27 @@
 												<h3>공지사항</h3>
 											</li>
 											<li>
-												<a href="<?=site_url('/Hello/notice')?>/main_notice">
+												<a href="<?=site_url('/Notice')?>/main_notice">
+												<i class="fa fa-angle-right"></i>전체 공지 </a>
+											</li>
+											<li>
+												<a href="<?=site_url('/Notice')?>/kusitms_notice">
 												<i class="fa fa-angle-right"></i>학회 공지 </a>
 											</li>
 											<li>
-												<a href="layout_search_on_header1.html">
-												<i class="fa fa-angle-right"></i>교육팀 공지 </a>
+												<a href="<?=site_url('/Notice')?>/edu_schedule">
+												<i class="fa fa-angle-right"></i>교육 일정 </a>
 											</li>
 											<li>
-												<a href="layout_search_on_header2.html">
-												<i class="fa fa-angle-right"></i>경영총괄팀 공지 </a>
+												<a href="<?=site_url('/Notice')?>/abroad_notice">
+												<i class="fa fa-angle-right"></i>언론보도 </a>
 											</li>
 											<li>
-												<a href="layout_sidebar_search_option1.html">
-												<i class="fa fa-angle-right"></i>대외홍보팀 공지 </a>
-											</li>
-											<li>
-												<a href="layout_sidebar_search_option2.html">
+												<a href="<?=site_url('/Notice')?>/diary">
 												<i class="fa fa-angle-right"></i>활동일지 </a>
 											</li>
 											<li>
-												<a href="<?=site_url('/Hello/add')?>">
+												<a href="<?=site_url('/Notice/add')?>">
 												<i class="fa fa-angle-right"></i>공지 작성 </a>
 											</li>
 										</ul>
@@ -759,7 +763,11 @@
 								</li>
 								<li>
 									<a href="<?=site_url('/Hello/about/management')?>">
-									운영진 구성 </a>
+									운영진 소개 </a>
+								</li>
+								<li>
+									<a href="<?=site_url('/Hello/about/history')?>">
+									히스토리 </a>
 								</li>
 								<li>
 									<a href="<?=site_url('/Hello/about/aoa')?>">
@@ -776,27 +784,31 @@
 							공지사항 <span class="arrow"></span></a>
 							<ul class="sub-menu">
 								<li>
-									<a href="<?=site_url('/Hello/notice')?>/main_notice">
+									<a href="<?=site_url('/Notice')?>/main_notice">
+									전체 공지 </a>
+								</li>
+								<li>
+									<a href="<?=site_url('/Notice')?>/kusitms_notice">
 									학회 공지 </a>
 								</li>
 								<li>
-									<a href="#">
-									교육팀 공지 </a>
+									<a href="<?=site_url('/Notice')?>/edu_schedule">
+									교육 일정 </a>
 								</li>
 								<li>
-									<a href="#">
-									경영총괄팀 공지 </a>
+									<a href="<?=site_url('/Notice')?>/abroad_notice">
+									언론보도 </a>
 								</li>
 								<li>
-									<a href="#">
-									대외홍보팀 공지 </a>
-								</li>
-								<li>
-									<a href="#">
+									<a href="<?=site_url('/Notice')?>/diary">
 									활동일지 </a>
 								</li>
+								<li>
+									<a href="<?=site_url('/Notice/add')?>">
+									공지 작성 </a>
+								</li>
 							</ul>
-						</li><?=site_url('/Hello')?>
+						</li>
 						<li>
 							<a href="#">
 							동문회(개발중) <span class="arrow"></span></a>
@@ -966,42 +978,6 @@
 								<li>
 									<a href="index.html">
 									10기 </a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a>
-					동문회 <span class="arrow">
-					</span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="javascript:;">
-							동문회 <span class="arrow">
-							</span>
-							</a>
-							<ul class="sub-menu">
-								<li>
-									<a href="#">
-									동문회 소개 </a>
-								</li>
-								<li>
-									<a href="index.html">
-									조직도 </a>
-								</li>
-								<li>
-									<a href="index.html">
-									동문회 공지 </a>
-								</li>
-								<li>
-									<a href="index.html">
-									멘토링 </a>
-								</li>
-								<li>
-									<a href="index.html">
-									동문회에게 질문 </a>
 								</li>
 							</ul>
 						</li>

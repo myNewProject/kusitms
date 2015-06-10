@@ -13,11 +13,11 @@
 						<i class="fa fa-angle-right"></i>
 					</li>
 					<li>
-						<a href="<?=site_url('/Hello/notice')?>/main_notice">공지사항</a>
+						<a href="<?=site_url('/Notice')?>/main_notice">공지사항</a>
 						<i class="fa fa-angle-right"></i>
 					</li>
 					<li>
-						<a href="<?=site_url('/Hello/add')?>">공지 작성</a>
+						<a href="<?=site_url('/Notice/add')?>">공지 작성</a>
 					</li>
 				</ul>
 			</div>
@@ -25,25 +25,18 @@
 			<!-- BEGIN PAGE CONTENT-->
 			<div class="row margin-bottom-30">
 				<div class="col-md-1"></div>
-					<form action="<?=site_url('/Hello')?>/add" method="post" id="addForm" name="addForm" class="form-horizontal col-md-10" enctype="multipart/form-data">
+					<form action="<?=site_url('/Notice')?>/add" method="post" id="addForm" name="addForm" class="form-horizontal col-md-10" enctype="multipart/form-data">
 						<? echo validation_errors(); ?>
 						<div class="form-group">
 							<label for="category" class="col-sm-1 control-label">분류</label>
 							<div class="col-sm-11">
 								<select class="form-control" id="category" name="category">
-									<optgroup  LABEL="─────────">
-										<option value="1">교육일정</option>
-										<option value="2">학회 공지</option>
-										<option value="3">멘토링 공지</option>
-										<option value="4">동문회 공지</option>
-										<option value="5">언론 보도</option>
-									</optgroup>
-									<optgroup  LABEL="─────────">
-										<option value="6">교육팀 공지</option>
-										<option value="7">경영총괄팀 공지</option>
-										<option value="8">대외홍보팀 공지</option>
-										<option value="9">활동일지</option>
-									</optgroup>
+									<option value="1">학회 공지</option>
+									<option value="2">교육일정</option>
+									<option value="3">언론 보도</option>
+									<option value="4">활동일지</option>
+									<option value="5">멘토링 공지</option>
+									<option value="6">동문회 공지</option>
 								</select>
 							</div>
 						</div>
@@ -75,6 +68,6 @@
 <script  src="<?=site_url('/static')?>/plugin/ckeditor/ckeditor.js"></script>
 <script>
 	CKEDITOR.replace('contentArea', { 
-		'filebrowserUploadUrl' : '/Kusitms/Hello/upload_form'
+		'filebrowserUploadUrl' : '/Kusitms/Notice/upload_form'
 	});
 </script>
