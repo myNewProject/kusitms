@@ -899,46 +899,14 @@
 							</span>
 							</a>
 							<ul class="sub-menu">
+								<? for ($i=1; $i < $member ; $i++) { 
+									# code...
+								?>
 								<li>
-									<a href="#">
-									1기 </a>
+									<a href="<?=site_url('/Members')?>/member_intro?member=<?=$i?>">
+									<?=$i?>기</a>
 								</li>
-								<li>
-									<a href="index.html">
-									2기 </a>
-								</li>
-								<li>
-									<a href="index.html">
-									3기 </a>
-								</li>
-								<li>
-									<a href="index.html">
-									4기 </a>
-								</li>
-								<li>
-									<a href="index.html">
-									5기 </a>
-								</li>
-								<li>
-									<a href="index.html">
-									6기 </a>
-								</li>
-								<li>
-									<a href="index.html">
-									7기 </a>
-								</li>
-								<li>
-									<a href="index.html">
-									8기 </a>
-								</li>
-								<li>
-									<a href="index.html">
-									9기 </a>
-								</li>
-								<li>
-									<a href="index.html">
-									10기 </a>
-								</li>
+								<?	}	?>
 							</ul>
 						</li>
 					</ul>
