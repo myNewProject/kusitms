@@ -136,7 +136,7 @@
 				</li>
 				<li class="mega-menu-dropdown">
 					<a data-toggle="dropdown" href="javascript:;" class="dropdown-toggle" data-hover="megamenu-dropdown" data-close-others="true">
-					11기 <i class="fa fa-angle-down"></i>
+					<?=$member?>기 <i class="fa fa-angle-down"></i>
 					</a>
 					<ul class="dropdown-menu" style="min-width: 400px;">
 						<li>
@@ -149,34 +149,30 @@
 												<h3>회원 소개</h3>
 											</li>
 											<li>
-												<a href="index_horizontal_menu.html">
+												<a href="<?=site_url('/Members')?>/member_intro?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>회원 소개 </a>
 											</li>
 											<li>
-												<a href="layout_horizontal_sidebar_menu.html">
+												<a href="<?=site_url('/Members')?>/member_intro?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>회원 조직도 </a>
 											</li>
 											<li>
-												<a href="layout_fontawesome_icons.html">
+												<a href="<?=site_url('/Members')?>/member_intro?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>교육 일정</a>
 											</li><br>
 											<li>
-												<h3>운영진 소개</h3>
+												<h3>운영진 게시판</h3>
 											</li>
 											<li>
-												<a href="<?=site_url('/Hello/about/management')?>">
-												<i class="fa fa-angle-right"></i>임원진 소개<span class="badge badge-roundless badge-danger">new</span></a>
-											</li>
-											<li>
-												<a href="layout_full_height_content.html">
+												<a href="<?=site_url('/Members')?>/edu_team?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>교육팀<span class="badge badge-roundless badge-warning">new</span></a>
 											</li>
 											<li>
-												<a href="layout_full_height_content.html">
+												<a href="<?=site_url('/Members')?>/management_team?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>경영총괄팀<span class="badge badge-roundless badge-warning">new</span></a>
 											</li>
 											<li>
-												<a href="layout_horizontal_menu1.html">
+												<a href="<?=site_url('/Members')?>/promote_team?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>대외홍보팀</a>
 											</li>
 										</ul>
@@ -187,35 +183,35 @@
 												<h3>조별 게시판</h3>
 											</li>
 											<li>
-												<a href="layout_horizontal_menu2.html">
+												<a href="<?=site_url('/Members')?>/team_board/1?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>일일호프 조</a>
 											</li>
 											<li>
-												<a href="layout_search_on_header1.html">
+												<a href="<?=site_url('/Members')?>/team_board/2?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>투미닛 조</a>
 											</li>
 											<li>
-												<a href="layout_search_on_header2.html">
+												<a href="<?=site_url('/Members')?>/team_board/3?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>보람삼 조</a>
 											</li>
 											<li>
-												<a href="layout_sidebar_search_option1.html">
+												<a href="<?=site_url('/Members')?>/team_board/4?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>사겨 조</a>
 											</li>
 											<li>
-												<a href="layout_sidebar_search_option2.html">
+												<a href="<?=site_url('/Members')?>/team_board/5?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>오구오구 조</a>
 											</li>
 											<li>
-												<a href="layout_sidebar_reversed.html">
+												<a href="<?=site_url('/Members')?>/team_board/6?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>육감적인 조</a>
 											</li>
 											<li>
-												<a href="layout_sidebar_fixed.html">
+												<a href="<?=site_url('/Members')?>/team_board/7?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>두마리토끼를 잡 조</a>
 											</li>
 											<li>
-												<a href="layout_sidebar_fixed.html">
+												<a href="<?=site_url('/Members')?>/team_board/8?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>팔루미 조</a>
 											</li>
 										</ul>
@@ -239,46 +235,14 @@
 											<li>
 												<h3>이전 기수</h3>
 											</li>
+											<? for ($i=1; $i < $member ; $i++) { 
+												# code...
+											?>
 											<li>
-												<a href="layout_horizontal_menu2.html">
-												<i class="fa fa-angle-right"></i>1기</a>
+												<a href="<?=site_url('/Members')?>/member_intro?member=<?=$i?>">
+												<i class="fa fa-angle-right"></i><?=$i?>기</a>
 											</li>
-											<li>
-												<a href="layout_search_on_header1.html">
-												<i class="fa fa-angle-right"></i>2기</a>
-											</li>
-											<li>
-												<a href="layout_search_on_header2.html">
-												<i class="fa fa-angle-right"></i>3기</a>
-											</li>
-											<li>
-												<a href="layout_sidebar_search_option1.html">
-												<i class="fa fa-angle-right"></i>4기</a>
-											</li>
-											<li>
-												<a href="layout_sidebar_search_option2.html">
-												<i class="fa fa-angle-right"></i>5기</a>
-											</li>
-											<li>
-												<a href="layout_sidebar_reversed.html">
-												<i class="fa fa-angle-right"></i>6기</a>
-											</li>
-											<li>
-												<a href="layout_sidebar_fixed.html">
-												<i class="fa fa-angle-right"></i>7기</a>
-											</li>
-											<li>
-												<a href="layout_sidebar_fixed.html">
-												<i class="fa fa-angle-right"></i>8기</a>
-											</li>
-											<li>
-												<a href="layout_sidebar_fixed.html">
-												<i class="fa fa-angle-right"></i>9기</a>
-											</li>
-											<li>
-												<a href="layout_sidebar_fixed.html">
-												<i class="fa fa-angle-right"></i>10기</a>
-											</li>
+											<?	}	?>
 										</ul>
 									</div>
 								</div>
@@ -848,39 +812,35 @@
 							</a>
 							<ul class="sub-menu">
 								<li>
-									<a href="index_horizontal_menu.html">
+									<a href="<?=site_url('/Members')?>/member_intro?member=<?=$member?>">
 									회원 소개 </a>
 								</li>
 								<li>
-									<a href="layout_horizontal_sidebar_menu.html">
+									<a href="<?=site_url('/Members')?>/member_intro?member=<?=$member?>">
 									회원 조직도 </a>
 								</li>
 								<li>
-									<a href="layout_horizontal_menu1.html">
+									<a href="<?=site_url('/Members')?>/member_intro?member=<?=$member?>">
 									교육 일정 </a>
 								</li>
 							</ul>
 						</li>
 						<li>
 							<a href="#">
-							운영진 소개 <span class="arrow">
+							운영진 게시판 <span class="arrow">
 							</span>
 							</a>
 							<ul class="sub-menu">
 								<li>
-									<a href="layout_sidebar_search_option1.html">
-									임원진 소개 </a>
-								</li>
-								<li>
-									<a href="layout_sidebar_search_option2.html">
+									<a href="<?=site_url('/Members')?>/edu_team?member=<?=$member?>">
 									교육팀 </a>
 								</li>
 								<li>
-									<a href="layout_sidebar_reversed.html">
+									<a href="<?=site_url('/Members')?>/management_team?member=<?=$member?>">
 									경영총괄팀 </a>
 								</li>
 								<li>
-									<a href="layout_sidebar_fixed.html">
+									<a href="<?=site_url('/Members')?>/promote_team?member=<?=$member?>">
 									대외홍보팀 </a>
 								</li>
 							</ul>
@@ -892,35 +852,35 @@
 							</a>
 							<ul class="sub-menu">
 								<li>
-									<a href="layout_disabled_menu.html">
+									<a href="<?=site_url('/Members')?>/team_board/1?member=<?=$member?>">
 									일일호프 조 </a>
 								</li>
 								<li>
-									<a href="layout_blank_page.html">
+									<a href="<?=site_url('/Members')?>/team_board/2?member=<?=$member?>">
 									투미닛 조 </a>
 								</li>
 								<li>
-									<a href="layout_boxed_page.html">
+									<a href="<?=site_url('/Members')?>/team_board/3?member=<?=$member?>">
 									보람삼 조 </a>
 								</li>
 								<li>
-									<a href="layout_language_bar.html">
+									<a href="<?=site_url('/Members')?>/team_board/4?member=<?=$member?>">
 									사겨 조 </a>
 								</li>
 								<li>
-									<a href="layout_language_bar.html">
+									<a href="<?=site_url('/Members')?>/team_board/5?member=<?=$member?>">
 									오구오구 조 </a>
 								</li>
 								<li>
-									<a href="layout_language_bar.html">
+									<a href="<?=site_url('/Members')?>/team_board/6?member=<?=$member?>">
 									육감적인 조 </a>
 								</li>
 								<li>
-									<a href="layout_language_bar.html">
+									<a href="<?=site_url('/Members')?>/team_board/7?member=<?=$member?>">
 									두마리토끼를 잡 조 </a>
 								</li>
 								<li>
-									<a href="layout_language_bar.html">
+									<a href="<?=site_url('/Members')?>/team_board/8?member=<?=$member?>">
 									팔루미 조 </a>
 								</li>
 							</ul>

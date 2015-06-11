@@ -9,11 +9,12 @@ class MY_Controller extends CI_Controller {
 	}
 
 	public function _header($index) {
-		
+		$this->load->model('member_model');
+		$cMember = $this->member_model->get_current_member();
 		switch ($index) {
 			case 'main-header':
 				$this->load->view('main-head');
-				$this->load->view('main-header');
+				$this->load->view('main-header', array('member'=>$cMember[0]->member));
 				break;
 			
 			default:

@@ -11,12 +11,30 @@ class Member_model extends CI_Model{
  
         return $this->db->query($strQuery)->result();
     }
+
+    function get_current_member() {
+        $strQuery = "SELECT member FROM users ORDER BY member DESC LIMIT 1";
+
+        return $this->db->query($strQuery)->result();
+    }
  
     function get_member ($seq){
          $strQuery = "SELECT id, name, university, email, class, ment FROM users WHERE class in('학회장', '부학회장', '교육팀장', '경영총괄팀장', '대외홍보팀장') AND member = ".$seq;
  
         return $this->db->query($strQuery)->result();
     }
+
+    function get_name($id) {
+        $strQuery = "SELECT name FROM users WHERE id = ".$id;
+ 
+        return $this->db->query($strQuery)->result();
+    }
+
+    function get_man_member($id) {
+        $strQuery = "SELECT member FROM users WHERE id = ".$id;
+ 
+        return $this->db->query($strQuery)->result();
+    }    
  
     function get2($seq){ 
 		$this->db->select('seq');

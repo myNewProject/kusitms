@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
  
-class Notice extends MY_Controller {
+class Members extends MY_Controller {
 
 	public function __construct()
 	{
@@ -8,101 +8,84 @@ class Notice extends MY_Controller {
 	}
 
 	public function index() {
-		redirect(site_url('/Notice/main_notice'));
+		redirect(site_url('/KusitmsErrorPage'));
 	}	
 
-	public function main_notice() {		// 공지사항
+	public function member_intro() {		// 공지사항
 		$this->_header('main-header');
 
-		$this->load->model('notice_model');
-		
-		// 교육일정
-		$_eduSchedule = $this->get_notice_intro(1);
+		$this->load->model('board_model');
+		$this->load->model('member_model');
 
-		// 멘토링 공지
-		$_mento = $this->get_notice_intro(2);
+		$_nav = "<a href='".site_url('/Notice')."/member_intro".$this->input->get('member')."'>".$this->input->get('member')."기 회원 소개</a>";
+		$_category = $this->input->get('member')."기 회원소개";
 
-		// 동문회 공지
-		$_afterSociety = $this->get_notice_intro(3);
+		if (!$this->input->get('member'))
+			redirect(site_url('/KusitmsErrorPage'));
+		$all_result = $this->board_model->getBoard(0, $this->input->get('member'));
+		$result = $this->make_board($all_result);
 
-		// 학회 공지사항
-		$_notice = $this->get_notice_intro(4);
-
-		// 언론보도
-		$_extraBoard = $this->get_notice_intro(5);
-
-		$this->load->view('main_notice', array('_eduSchedule'=>$_eduSchedule, '_mento'=>$_mento, '_afterSociety'=>$_afterSociety, '_notice'=>$_notice, '_extraBoard'=>$_extraBoard));
+		$this->load->view('notice_board', array('_nav'=>$_nav, 'category'=>$_category, '_header'=>$result['_header'], '_board'=>$result['_board'], '_footer'=>$result['_footer']));
 				
 		$this->_footer('main-footer');
 	}
 
-	public function kusitms_notice() {
+	public function edu_team() {
 		$this->_header('main-header');
 
-		$this->load->model('notice_model');  // Model 가져오기
+		$this->load->model('board_model');
+		$this->load->model('member_model');
 
-		$_nav = "<a href='".site_url('/Notice')."/kusitms_notice'>학회 공지</a>";
-		$_category = "학회공지";
+		$_nav = "<a href='".site_url('/Members')."/edu_team?".$this->input->get('member')."'>".$this->input->get('member')."기 교육팀</a>";
+		$_category = $this->input->get('member')."기 교육팀";
 
-		// 교육일정 가져오기
-		$all_result = $this->notice_model->getBoard(1);
-		$result = $this->make_board($all_result, 'kusitms_notice');
+		if (!$this->input->get('member'))
+			redirect(site_url('/KusitmsErrorPage'));
+		$all_result = $this->board_model->getBoard(9, $this->input->get('member'));
+		$result = $this->make_board($all_result);
 
 		$this->load->view('notice_board', array('_nav'=>$_nav, 'category'=>$_category, '_header'=>$result['_header'], '_board'=>$result['_board'], '_footer'=>$result['_footer']));
-
+				
 		$this->_footer('main-footer');
 	}
 
-	public function edu_schedule() {
+	public function management_team() {
 		$this->_header('main-header');
 
-		$this->load->model('notice_model');  // Model 가져오기
+		$this->load->model('board_model');
+		$this->load->model('member_model');
 
-		$_nav = "<a href='".site_url('/Notice')."/edu_schedule'>교육 일정</a>";
-		$_category = "교육일정";
+		$_nav = "<a href='".site_url('/Members')."/management_team?".$this->input->get('member')."'>".$this->input->get('member')."기 경영총괄팀</a>";
+		$_category = $this->input->get('member')."기 경영총괄팀";
 
-		// 교육일정 가져오기
-		$all_result = $this->notice_model->getBoard(2);
-		$result = $this->make_board($all_result, 'edu_schedule');
+		if (!$this->input->get('member'))
+			redirect(site_url('/KusitmsErrorPage'));
+		$all_result = $this->board_model->getBoard(10, $this->input->get('member'));
+		$result = $this->make_board($all_result);
 
 		$this->load->view('notice_board', array('_nav'=>$_nav, 'category'=>$_category, '_header'=>$result['_header'], '_board'=>$result['_board'], '_footer'=>$result['_footer']));
-
+				
 		$this->_footer('main-footer');
 	}
 
-	public function abroad_notice() {
+	public function promote_team() {
 		$this->_header('main-header');
 
-		$this->load->model('notice_model');  // Model 가져오기
+		$this->load->model('board_model');
+		$this->load->model('member_model');
 
-		$_nav = "<a href='".site_url('/Notice')."/abroad_notice'>언론보도</a>";
-		$_category = "언론보도";
+		$_nav = "<a href='".site_url('/Members')."/promote_team?".$this->input->get('member')."'>".$this->input->get('member')."기 대외홍보팀</a>";
+		$_category = $this->input->get('member')."기 대외홍보팀";
 
-		// 언론 보도 자료 가져오기
-		$all_result = $this->notice_model->getBoard(3);
-		$result = $this->make_board($all_result, 'abroad_notice');
-
-		$this->load->view('notice_board', array('_nav'=>$_nav, 'category'=>$_category, '_header'=>$result['_header'], '_board'=>$result['_board'], '_footer'=>$result['_footer']));
-
-		$this->_footer('main-footer');
-	} 
-
-	public function diary() {
-		$this->_header('main-header');
-
-		$this->load->model('notice_model');  // Model 가져오기
-
-		$_nav = "<a href='".site_url('/Notice')."/diary'>활동일지</a>";
-		$_category = "활동일지";
-
-		// 언론 보도 자료 가져오기
-		$all_result = $this->notice_model->getBoard(4);
-		$result = $this->make_board($all_result, 'diary');
+		if (!$this->input->get('member'))
+			redirect(site_url('/KusitmsErrorPage'));
+		$all_result = $this->board_model->getBoard(11, $this->input->get('member'));
+		$result = $this->make_board($all_result);
 
 		$this->load->view('notice_board', array('_nav'=>$_nav, 'category'=>$_category, '_header'=>$result['_header'], '_board'=>$result['_board'], '_footer'=>$result['_footer']));
-
+				
 		$this->_footer('main-footer');
-	} 
+	}
 
 	public function add() {
 		if (!$this->session->userdata('is_login')) {
@@ -183,7 +166,7 @@ class Notice extends MY_Controller {
 		return $data;
 	}
 
-	public function make_board($all_result, $url) {
+	public function make_board($all_result) {
 		$_header = "<tr>
 					<th>
 						 분류
@@ -275,7 +258,7 @@ class Notice extends MY_Controller {
 			
 			$_footer = "<ul class='pagination col-xs-12'>";
 			if ($pblock > 0) {
-				$_footer .= "<li><a href=".site_url('/Notice')."/".$url."?cblock=".$pblock."&cpage=".$pstartpage." aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>";
+				$_footer .= "<li><a href=".site_url('/Notice')."/edu_notice?cblock=".$pblock."&cpage=".$pstartpage." aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>";
 			} else { 
 				$_footer .= "<li class='disabled'><span><span aria-hidden='true'>&laquo;</span></span></li>";
 			}
@@ -285,14 +268,14 @@ class Notice extends MY_Controller {
 				if ($i > $totalpage)
 					break;
 				if ($i == $cpage) 
-					$_footer .= "<li class='active'><a href=".site_url('/Notice')."/".$url."?cblock=".$cblock."&cpage=".$i.">".$i."</a></li>" ;
+					$_footer .= "<li class='active'><a href=".site_url('/Notice')."/edu_notice?cblock=".$cblock."&cpage=".$i.">".$i."</a></li>" ;
 				else 
-					$_footer .= "<li><a href=".site_url('/Notice')."/".$url."?cblock=".$cblock."&cpage=".$i.">".$i."</a></li> ";
+					$_footer .= "<li><a href=".site_url('/Notice')."/edu_notice?cblock=".$cblock."&cpage=".$i.">".$i."</a></li> ";
 				$i = $i + 1;
 			endwhile;
 			
 			if ($nstartpage <= $totalpage) {
-				$_footer .= "<li><a href=".site_url('/Notice')."/".$url."?cblock=".$nblock."&cpage=".$nstartpage." aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li></ul> ";
+				$_footer .= "<li><a href=".site_url('/Notice')."/edu_notice?cblock=".$nblock."&cpage=".$nstartpage." aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li></ul> ";
 			} else {
 				$_footer .= "<li class='disabled'><span><span aria-hidden='true'>&raquo;</span></span></li></ul> ";
 			}
@@ -301,43 +284,122 @@ class Notice extends MY_Controller {
 		return $return;
 	}
 
-	public function get_notice_intro($index) {
-		$all_result = $this->notice_model->gets($index);
-		$_item = "";
+	public function get_board_intro($index, $member) {
+		$_header = "<tr>
+					<th>
+						 분류
+					</th>
+					<th>
+						 제목
+					</th>
+					<th>
+						 작성자
+					</th>
+					<th>
+						 작성일
+					</th>
+					<th>
+						 조회수
+					</th>
+				</tr>";
+
 		if(!$all_result) {
-			$_item .= "
-					<div class='news-blocks'>
-						<h3>
-						<a href='page_news_item.html'>
-						게시글이 없습니다. </a>
-						</h3>
-					</div>";
+			$_board = "
+					<tr>
+						<td colspan=5 align=center> 게시글이 없습니다.</td>
+					</tr>";
+			$_footer = "";
 			
 		} else {
-			foreach ($all_result as $result) {
+			$cpage = $this->input->get('cpage');
+			$cblock = $this->input->get('cblock');
+
+			$_board="";
+			$total = count($all_result);
+			if ($cpage == '') 
+				$cpage = 1;
+			$pagesize = 5;
+			
+			$totalpage = (int)($total/$pagesize);
+			if (($total % $pagesize) != 0) 
+				$totalpage = $totalpage + 1;
+			
+			$counter = 0;
+
+			while ($counter < $pagesize) :
+				$newcounter = ($cpage - 1)*$pagesize + $counter;
+				if ($newcounter == $total) 
+					break;
+
+				$result = $all_result[$newcounter];  // 각 게시글 하나씩 가져오기
+				
 				$id = $result->id;
+				$category = $result->category;
 				$writer = $result->writer;
 				$title = $result->title;
-				$content = $result->content;
 				$postDate = $result->postDate;
-				$_item .= "
-					<div class='news-blocks'>
-						<h3>
-						<a href='page_news_item.html'>
-						".$title." </a>
-						</h3>
-						<div class='news-block-tags'>
-							<strong>".$writer."</strong>
-							<em>".$postDate."</em>
-						</div>
-						".$content."
-						<a href='page_news_item.html' class='news-block-btn'>
-						Read more <i class='m-icon-swapright m-icon-black'></i>
-						</a>
-					</div>";
-			}	
+				$click = $result->click;
+				$_board .= "
+					<tr>
+						<td>
+							 ".$category."
+						</td>
+						<td>
+							 ".$title."
+						</td>
+						<td>
+							 ".$writer."
+						</td>
+						<td>
+							 ".$postDate."
+						</td>
+						<td>
+							".$click."
+						</td>
+					</tr>
+					";
+
+				$counter = $counter + 1;
+			endwhile;
+
+			if ($cblock == '') 
+				$cblock = 1;
+			$blocksize = 5;
+			
+			$pblock = $cblock - 1;
+			$nblock = $cblock + 1;
+			
+			$startpage = ($cblock - 1) * $blocksize + 1;
+			
+			$pstartpage = $startpage - 1;
+			$nstartpage = $startpage + $blocksize;
+			
+			$_footer = "<ul class='pagination col-xs-12'>";
+			if ($pblock > 0) {
+				$_footer .= "<li><a href=".site_url('/Notice')."/edu_notice?cblock=".$pblock."&cpage=".$pstartpage." aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>";
+			} else { 
+				$_footer .= "<li class='disabled'><span><span aria-hidden='true'>&laquo;</span></span></li>";
+			}
+					
+			$i = $startpage;
+			while ($i < $nstartpage) :
+				if ($i > $totalpage)
+					break;
+				if ($i == $cpage) 
+					$_footer .= "<li class='active'><a href=".site_url('/Notice')."/edu_notice?cblock=".$cblock."&cpage=".$i.">".$i."</a></li>" ;
+				else 
+					$_footer .= "<li><a href=".site_url('/Notice')."/edu_notice?cblock=".$cblock."&cpage=".$i.">".$i."</a></li> ";
+				$i = $i + 1;
+			endwhile;
+			
+			if ($nstartpage <= $totalpage) {
+				$_footer .= "<li><a href=".site_url('/Notice')."/edu_notice?cblock=".$nblock."&cpage=".$nstartpage." aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li></ul> ";
+			} else {
+				$_footer .= "<li class='disabled'><span><span aria-hidden='true'>&raquo;</span></span></li></ul> ";
+			}
 		}
-		return $_item;
+		$return = array('_header'=>$_header, '_board'=>$_board, '_footer'=>$_footer);
+		return $return;
 	}
 }
 ?>
