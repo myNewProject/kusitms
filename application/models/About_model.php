@@ -1,5 +1,5 @@
 <?php
-class Notice_model extends CI_Model{
+class About_model extends CI_Model{
  
     function __construct()
     {
@@ -7,25 +7,19 @@ class Notice_model extends CI_Model{
     }
  
     function gets($category){
-        $strQuery = "SELECT id, title, substring(content, 1, 255) as content, writer, postDate FROM notice_board WHERE category = ".$category." ORDER BY id DESC LIMIT 4";
+        $strQuery = "SELECT id, title, substring(content, 1, 255) as content, writer, postDate FROM about_us WHERE category = ".$category." ORDER BY id DESC LIMIT 4";
 
         return $this->db->query($strQuery)->result();
     }
 
-    function getItem($index) {
-         $strQuery = "SELECT id, category, title, content, attachment_org, attachment_file, writer, postDate, click FROM notice_board WHERE id = ".$index;
-
-        return $this->db->query($strQuery)->row();
-    }
-
     function getBoard($category){
-        $strQuery = "SELECT id, category, title, writer, postDate, click FROM notice_board WHERE category = ".$category." ORDER BY id DESC";
+        $strQuery = "SELECT id, category, title, writer, postDate, click FROM about_us WHERE category = ".$category." ORDER BY id DESC";
 
         return $this->db->query($strQuery)->result();
     }
 
     function getAll($category){
-        $strQuery = "SELECT id, title, content, writer, postDate FROM notice_board WHERE category = ".$category." ORDER BY id DESC";
+        $strQuery = "SELECT id, title, content, writer, postDate FROM about_us WHERE category = ".$category." ORDER BY id DESC";
 
         return $this->db->query($strQuery)->result();
     }
@@ -33,7 +27,7 @@ class Notice_model extends CI_Model{
     function add($category, $title, $content, $writer) {
  //   function add($category, $title, $content) {
         $this->db->set('postDate', 'CURRENT_TIMESTAMP()', false);
-        $this->db->insert('notice_board', array(
+        $this->db->insert('about_us', array(
             'category'=>$category,
             'title'=>$title,
             'content'=>$content,
@@ -46,7 +40,7 @@ class Notice_model extends CI_Model{
     function addFile($category, $title, $content, $writer, $attachment_org, $attachment_file) {
 //    function addFile($category, $title, $content, $attachment_org, $attachment_file) {
         $this->db->set('postDate', 'CURRENT_TIMESTAMP()', false);
-        $this->db->insert('notice_board', array(
+        $this->db->insert('about_us', array(
             'category'=>$category,
             'title'=>$title,
             'content'=>$content,

@@ -17,15 +17,15 @@ class Members extends MY_Controller {
 		$this->load->model('board_model');
 		$this->load->model('member_model');
 
-		$_nav = "<a href='".site_url('/Notice')."/member_intro".$this->input->get('member')."'>".$this->input->get('member')."기 회원 소개</a>";
+		$_nav = "<a href='".site_url('/Members')."/member_intro?member=".$this->input->get('member')."'>".$this->input->get('member')."기 회원 소개</a>";
 		$_category = $this->input->get('member')."기 회원소개";
 
 		if (!$this->input->get('member'))
 			redirect(site_url('/KusitmsErrorPage'));
 		$all_result = $this->board_model->getBoard(0, $this->input->get('member'));
-		$result = $this->make_board($all_result);
+		$result = $this->make_board($all_result, 'member_intro', $this->input->get('member'));
 
-		$this->load->view('notice_board', array('_nav'=>$_nav, 'category'=>$_category, '_header'=>$result['_header'], '_board'=>$result['_board'], '_footer'=>$result['_footer']));
+		$this->load->view('member_board', array('_nav'=>$_nav, 'category'=>$_category, 'member'=>$this->input->get('member'), '_header'=>$result['_header'], '_board'=>$result['_board'], '_footer'=>$result['_footer']));
 				
 		$this->_footer('main-footer');
 	}
@@ -36,15 +36,15 @@ class Members extends MY_Controller {
 		$this->load->model('board_model');
 		$this->load->model('member_model');
 
-		$_nav = "<a href='".site_url('/Members')."/edu_team?".$this->input->get('member')."'>".$this->input->get('member')."기 교육팀</a>";
+		$_nav = "<a href='".site_url('/Members')."/edu_team?member=".$this->input->get('member')."'>".$this->input->get('member')."기 교육팀</a>";
 		$_category = $this->input->get('member')."기 교육팀";
 
 		if (!$this->input->get('member'))
 			redirect(site_url('/KusitmsErrorPage'));
 		$all_result = $this->board_model->getBoard(9, $this->input->get('member'));
-		$result = $this->make_board($all_result);
+		$result = $this->make_board($all_result, 'edu_team', $this->input->get('member'));
 
-		$this->load->view('notice_board', array('_nav'=>$_nav, 'category'=>$_category, '_header'=>$result['_header'], '_board'=>$result['_board'], '_footer'=>$result['_footer']));
+		$this->load->view('member_board', array('_nav'=>$_nav, 'category'=>$_category, 'member'=>$this->input->get('member'), '_header'=>$result['_header'], '_board'=>$result['_board'], '_footer'=>$result['_footer']));
 				
 		$this->_footer('main-footer');
 	}
@@ -55,15 +55,15 @@ class Members extends MY_Controller {
 		$this->load->model('board_model');
 		$this->load->model('member_model');
 
-		$_nav = "<a href='".site_url('/Members')."/management_team?".$this->input->get('member')."'>".$this->input->get('member')."기 경영총괄팀</a>";
+		$_nav = "<a href='".site_url('/Members')."/management_team?member=".$this->input->get('member')."'>".$this->input->get('member')."기 경영총괄팀</a>";
 		$_category = $this->input->get('member')."기 경영총괄팀";
 
 		if (!$this->input->get('member'))
 			redirect(site_url('/KusitmsErrorPage'));
 		$all_result = $this->board_model->getBoard(10, $this->input->get('member'));
-		$result = $this->make_board($all_result);
+		$result = $this->make_board($all_result, 'management_team', $this->input->get('member'));
 
-		$this->load->view('notice_board', array('_nav'=>$_nav, 'category'=>$_category, '_header'=>$result['_header'], '_board'=>$result['_board'], '_footer'=>$result['_footer']));
+		$this->load->view('member_board', array('_nav'=>$_nav, 'category'=>$_category, 'member'=>$this->input->get('member'), '_header'=>$result['_header'], '_board'=>$result['_board'], '_footer'=>$result['_footer']));
 				
 		$this->_footer('main-footer');
 	}
@@ -74,16 +74,104 @@ class Members extends MY_Controller {
 		$this->load->model('board_model');
 		$this->load->model('member_model');
 
-		$_nav = "<a href='".site_url('/Members')."/promote_team?".$this->input->get('member')."'>".$this->input->get('member')."기 대외홍보팀</a>";
+		$_nav = "<a href='".site_url('/Members')."/promote_team?member=".$this->input->get('member')."'>".$this->input->get('member')."기 대외홍보팀</a>";
 		$_category = $this->input->get('member')."기 대외홍보팀";
 
 		if (!$this->input->get('member'))
 			redirect(site_url('/KusitmsErrorPage'));
 		$all_result = $this->board_model->getBoard(11, $this->input->get('member'));
-		$result = $this->make_board($all_result);
+		$result = $this->make_board($all_result, 'promote_team', $this->input->get('member'));
 
-		$this->load->view('notice_board', array('_nav'=>$_nav, 'category'=>$_category, '_header'=>$result['_header'], '_board'=>$result['_board'], '_footer'=>$result['_footer']));
+		$this->load->view('member_board', array('_nav'=>$_nav, 'category'=>$_category, 'member'=>$this->input->get('member'), '_header'=>$result['_header'], '_board'=>$result['_board'], '_footer'=>$result['_footer']));
 				
+		$this->_footer('main-footer');
+	}
+
+	public function team_board($team) {
+		$this->_header('main-header');
+
+		$this->load->model('board_model');
+		$this->load->model('member_model');
+
+		$_nav = "<a href='".site_url('/Members')."/team_board/".$team."?member=".$this->input->get('member')."'>".$team."조</a>";
+		$_category = $team."조";
+
+		if (!$this->input->get('member'))
+			redirect(site_url('/KusitmsErrorPage'));
+		$all_result = $this->board_model->getBoard($team, $this->input->get('member'));
+		$result = $this->make_board($all_result, 'team_board', $this->input->get('member'));
+
+		$this->load->view('member_board', array('_nav'=>$_nav, 'category'=>$_category, 'member'=>$this->input->get('member'), '_header'=>$result['_header'], '_board'=>$result['_board'], '_footer'=>$result['_footer']));
+
+		$this->_footer('main-footer');
+	}
+
+	public function board_item($index) {
+		$this->_header('main-header');
+
+		$this->load->model('board_model');  // Model 가져오기
+		$result = $this->board_model->getItem($index); // 공지글 가져오기
+		$member = $this->input->get('member');
+		switch ($result->category) {
+		 	case 0:
+		 		$_category = $member."기 회원소개";
+		 		$_nav = "<a href='".site_url('/Members')."/member_intro'>".$member."기 회원소개</a>";
+		 		break;
+		 	case 1:
+		 		$_category = "1조";
+		 		$_nav = "<a href='".site_url('/Members')."/team_board/1?member=".$member."'>1조</a>";
+		 		break;
+		 	case 2:
+		 		$_category = "2조";
+		 		$_nav = "<a href='".site_url('/Members')."/team_board/2?member=".$member."'>2조</a>";
+		 		break;
+		 	case 3:
+		 		$_category = "3조";
+		 		$_nav = "<a href='".site_url('/Members')."/team_board/3?member=".$member."'>3조</a>";
+		 		break;
+		 	case 4:
+		 		$_category = "4조";
+		 		$_nav = "<a href='".site_url('/Members')."/team_board/4?member=".$member."'>4조</a>";
+		 		break;
+		 	case 5:
+		 		$_category = "5조";
+		 		$_nav = "<a href='".site_url('/Members')."/team_board/5?member=".$member."'>5조</a>";
+		 		break;
+		 	case 6:
+		 		$_category = "6조";
+		 		$_nav = "<a href='".site_url('/Members')."/team_board/6?member=".$member."'>6조</a>";
+		 		break;
+		 	case 7:
+		 		$_category = "7조";
+		 		$_nav = "<a href='".site_url('/Members')."/team_board/7?member=".$member."'>7조</a>";
+		 		break;
+		 	case 8:
+		 		$_category = "8조";
+		 		$_nav = "<a href='".site_url('/Members')."/team_board/8?member=".$member."'>8조</a>";
+		 		break;
+		 	case 9:
+		 		$_category = $member."기 교육팀";
+		 		$_nav = "<a href='".site_url('/Members')."/edu_team?member=".$member."'>".$member."기 교육팀</a>";
+		 		break;
+		 	case 10:
+		 		$_category = $member."기 경영총괄팀";
+		 		$_nav = "<a href='".site_url('/Members')."/management_team?member=".$member."'>".$member."기 경영총괄팀</a>";
+		 		break;
+		 	case 11:
+		 		$_category = $member."기 대외홍보팀";
+		 		$_nav = "<a href='".site_url('/Members')."/promote_team'>".$member."기 대외홍보팀</a>";
+		 		break;
+		 	default:
+		 		$_category = $member."기 회원소개";
+		 		$_nav = "<a href='".site_url('/Members')."/member_intro'>".$member."기 회원소개</a>";
+		 		break;
+		 }
+
+		$comments = $this->getComments($index);
+		$reply_count = $this->board_model->getCountReply($index);
+		
+		$this->load->view('member_item', array('_nav'=>$_nav, 'category'=>$_category, 'member'=>$member, 'board_item'=>$result, 'comments'=>$comments, 'reply_count'=>$reply_count->count));
+
 		$this->_footer('main-footer');
 	}
 
@@ -107,16 +195,16 @@ class Members extends MY_Controller {
 		if ($this->form_validation->run() == FALSE) {
 			$this->load->view('addNotice');
 		} else {
-			$this->load->model('notice_model');
+			$this->load->model('member_model');
 
 			if (! $file = $this->upload_receive('attachment')) { // 첨부파일이 없을경우
-				$this->notice_model->add($this->input->post('category'), $this->input->post('title'), $this->input->post('contentArea'), $this->session->userdata('userid'));
+				$this->board_model->add($this->input->post('category'), $this->input->post('title'), $this->input->post('contentArea'), $this->session->userdata('userid'));
 			} else {
-				$this->notice_model->addFile($this->input->post('category'), $this->input->post('title'), $this->input->post('contentArea'), $this->session->userdata('userid'), $file['orig_name'], $file['file_name']);
+				$this->board_model->addFile($this->input->post('category'), $this->input->post('title'), $this->input->post('contentArea'), $this->session->userdata('userid'), $file['orig_name'], $file['file_name']);
 			}
 			$this->session->set_flashdata('message', '게시글 작성 성공');
 
-			redirect(site_url('/Notice/main_notice'));
+			redirect(site_url('/Members/member_intro'));
 		}
 
 		$this->_footer('main-footer');
@@ -166,10 +254,10 @@ class Members extends MY_Controller {
 		return $data;
 	}
 
-	public function make_board($all_result) {
+	public function make_board($all_result, $url, $member) {
 		$_header = "<tr>
 					<th>
-						 분류
+						 글 번호
 					</th>
 					<th>
 						 제목
@@ -224,10 +312,10 @@ class Members extends MY_Controller {
 				$_board .= "
 					<tr>
 						<td>
-							 ".$category."
+							 ".$id."
 						</td>
 						<td>
-							 ".$title."
+							<a href=".site_url('/Members/board_item')."/".$id."?member=".$member.">".$title."</a>
 						</td>
 						<td>
 							 ".$writer."
@@ -239,6 +327,7 @@ class Members extends MY_Controller {
 							".$click."
 						</td>
 					</tr>
+					</a>
 					";
 
 				$counter = $counter + 1;
@@ -258,7 +347,7 @@ class Members extends MY_Controller {
 			
 			$_footer = "<ul class='pagination col-xs-12'>";
 			if ($pblock > 0) {
-				$_footer .= "<li><a href=".site_url('/Notice')."/edu_notice?cblock=".$pblock."&cpage=".$pstartpage." aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>";
+				$_footer .= "<li><a href=".site_url('/Members')."/".$url."?cblock=".$pblock."&cpage=".$pstartpage." aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>";
 			} else { 
 				$_footer .= "<li class='disabled'><span><span aria-hidden='true'>&laquo;</span></span></li>";
 			}
@@ -268,14 +357,14 @@ class Members extends MY_Controller {
 				if ($i > $totalpage)
 					break;
 				if ($i == $cpage) 
-					$_footer .= "<li class='active'><a href=".site_url('/Notice')."/edu_notice?cblock=".$cblock."&cpage=".$i.">".$i."</a></li>" ;
+					$_footer .= "<li class='active'><a href=".site_url('/Members')."/".$url."?cblock=".$cblock."&cpage=".$i.">".$i."</a></li>" ;
 				else 
-					$_footer .= "<li><a href=".site_url('/Notice')."/edu_notice?cblock=".$cblock."&cpage=".$i.">".$i."</a></li> ";
+					$_footer .= "<li><a href=".site_url('/Members')."/".$url."?cblock=".$cblock."&cpage=".$i.">".$i."</a></li> ";
 				$i = $i + 1;
 			endwhile;
 			
 			if ($nstartpage <= $totalpage) {
-				$_footer .= "<li><a href=".site_url('/Notice')."/edu_notice?cblock=".$nblock."&cpage=".$nstartpage." aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li></ul> ";
+				$_footer .= "<li><a href=".site_url('/Members')."/".$url."?cblock=".$nblock."&cpage=".$nstartpage." aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li></ul> ";
 			} else {
 				$_footer .= "<li class='disabled'><span><span aria-hidden='true'>&raquo;</span></span></li></ul> ";
 			}
@@ -284,122 +373,177 @@ class Members extends MY_Controller {
 		return $return;
 	}
 
-	public function get_board_intro($index, $member) {
-		$_header = "<tr>
-					<th>
-						 분류
-					</th>
-					<th>
-						 제목
-					</th>
-					<th>
-						 작성자
-					</th>
-					<th>
-						 작성일
-					</th>
-					<th>
-						 조회수
-					</th>
-				</tr>";
-
+	public function get_board_intro($category) {
+		$all_result = $this->board_model->gets($category);
+		$_item = "";
 		if(!$all_result) {
-			$_board = "
-					<tr>
-						<td colspan=5 align=center> 게시글이 없습니다.</td>
-					</tr>";
-			$_footer = "";
+			$_item .= "
+					<div class='news-blocks'>
+						<h3>
+						<a href='page_news_item.html'>
+						게시글이 없습니다. </a>
+						</h3>
+					</div>";
 			
 		} else {
-			$cpage = $this->input->get('cpage');
-			$cblock = $this->input->get('cblock');
-
-			$_board="";
-			$total = count($all_result);
-			if ($cpage == '') 
-				$cpage = 1;
-			$pagesize = 5;
-			
-			$totalpage = (int)($total/$pagesize);
-			if (($total % $pagesize) != 0) 
-				$totalpage = $totalpage + 1;
-			
-			$counter = 0;
-
-			while ($counter < $pagesize) :
-				$newcounter = ($cpage - 1)*$pagesize + $counter;
-				if ($newcounter == $total) 
-					break;
-
-				$result = $all_result[$newcounter];  // 각 게시글 하나씩 가져오기
-				
+			foreach ($all_result as $result) {
 				$id = $result->id;
-				$category = $result->category;
 				$writer = $result->writer;
 				$title = $result->title;
+				$content = $result->content;
 				$postDate = $result->postDate;
-				$click = $result->click;
-				$_board .= "
-					<tr>
-						<td>
-							 ".$category."
-						</td>
-						<td>
-							 ".$title."
-						</td>
-						<td>
-							 ".$writer."
-						</td>
-						<td>
-							 ".$postDate."
-						</td>
-						<td>
-							".$click."
-						</td>
-					</tr>
-					";
+				$_item .= "
+					<div class='news-blocks'>
+						<h3>
+						<a href='".site_url('/Members/board_item')."/".$id."'>
+						".$title." </a>
+						</h3>
+						<div class='news-block-tags'>
+							<strong>".$writer."</strong>
+							<em>".$postDate."</em>
+						</div>
+						".$content."
+						<a href='".site_url('/Members/board_item').'/'.$id."' class='news-block-btn'>
+						Read more <i class='m-icon-swapright m-icon-black'></i>
+						</a>
+					</div>";
+			}	
+		}
+		return $_item;
+	}
 
-				$counter = $counter + 1;
-			endwhile;
+	// 댓글 관련
 
-			if ($cblock == '') 
-				$cblock = 1;
-			$blocksize = 5;
-			
-			$pblock = $cblock - 1;
-			$nblock = $cblock + 1;
-			
-			$startpage = ($cblock - 1) * $blocksize + 1;
-			
-			$pstartpage = $startpage - 1;
-			$nstartpage = $startpage + $blocksize;
-			
-			$_footer = "<ul class='pagination col-xs-12'>";
-			if ($pblock > 0) {
-				$_footer .= "<li><a href=".site_url('/Notice')."/edu_notice?cblock=".$pblock."&cpage=".$pstartpage." aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>";
-			} else { 
-				$_footer .= "<li class='disabled'><span><span aria-hidden='true'>&laquo;</span></span></li>";
-			}
-					
-			$i = $startpage;
-			while ($i < $nstartpage) :
-				if ($i > $totalpage)
-					break;
-				if ($i == $cpage) 
-					$_footer .= "<li class='active'><a href=".site_url('/Notice')."/edu_notice?cblock=".$cblock."&cpage=".$i.">".$i."</a></li>" ;
-				else 
-					$_footer .= "<li><a href=".site_url('/Notice')."/edu_notice?cblock=".$cblock."&cpage=".$i.">".$i."</a></li> ";
-				$i = $i + 1;
-			endwhile;
-			
-			if ($nstartpage <= $totalpage) {
-				$_footer .= "<li><a href=".site_url('/Notice')."/edu_notice?cblock=".$nblock."&cpage=".$nstartpage." aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li></ul> ";
-			} else {
-				$_footer .= "<li class='disabled'><span><span aria-hidden='true'>&raquo;</span></span></li></ul> ";
+	private function getComments($index) {	/* Comment 불러오기 */
+		$this->load->model('Comments_model');
+
+		$resultCom = $this->Comments_model->getComments($index);
+		$comments = '';
+
+		foreach ($resultCom as $comment) {
+			if ($comment->re_id === '0') {	// 대댓이 아닌경우
+				if (!$reComments = $this->Comments_model->getRecomments($index, $comment->co_id)) { // 대댓있는지 확인
+					//array_push($comments, $comment);
+					$comments .= $this->make_comment(
+						$comment->co_id,
+						$comment->re_id,
+						$comment->board_id,
+						$comment->uid,
+						$comment->nickname,
+						$comment->postdate,
+						$comment->comment,
+						$comment->liker
+						);
+				} else {
+					$comments .= $this->make_comment(
+						$comment->co_id,
+						$comment->re_id,
+						$comment->board_id,
+						$comment->uid,
+						$comment->nickname,
+						$comment->postdate,
+						$comment->comment,
+						$comment->liker
+						);
+					foreach ($reComments as $reComment) {
+						$comments .= $this->make_comment(
+							$reComment->co_id,
+							$reComment->re_id,
+							0,
+							$reComment->uid,
+							$reComment->nickname,
+							$reComment->postdate,
+							$reComment->comment,
+							$reComment->liker
+							);
+					}
+				}
 			}
 		}
-		$return = array('_header'=>$_header, '_board'=>$_board, '_footer'=>$_footer);
-		return $return;
+		return $comments;
+	}
+
+	private function make_comment($co_id, $re_id, $board_id, $uid, $nickname, $postdate, $comment, $liker) {
+		$make_comment = 
+			'<!-- BEGIN COMMENTS -->
+			<div class="row bg-info"><!-- each comments -->';
+		if ($re_id != 0) { 	
+		$make_comment .= 
+				'<div class="col-xs-1">
+					<span class="glyphicon glyphicon-minus"></span>
+				</div>
+				<div class="col-xs-11">';
+		} else {
+		$make_comment .= 
+				'<div class="col-xs-12">';
+		}
+		$make_comment .= 
+					'<h4>
+						<!--회원사진-->
+						<img width="50" height="50" src="'.site_url('/static/img/member').'/'.$uid.'.jpg" class="media-object" alt="회원사진">
+						 <a href="javascript:">'.$nickname.'</a><span class="glyphicon glyphicon-calendar pull-right">'.$postdate.'</span>
+					</h4> 
+					<p>
+						 '.$comment.'
+					</p>
+					<span id="bu'.$co_id.'"><button type="button" class="btn btn-primary" onclick="likeComment('.$co_id.')">좋아요 <span class="badge">'.$liker.'</span></button></span>';
+					
+		if ($this->session->userdata('is_login') && $re_id === '0' ) { //$this->session->userdata('is_login') && $re_id === 0 
+				$make_comment .= 
+					'<button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#com'.$co_id.'" aria-expanded="false" aria-controls="collapseExample">댓글달기</button>
+					<div class="col-sm-12 collapse" aria-hidden="true" id="com'.$co_id.'">
+						<form action="'.site_url('/Members/addComment').'/'.$board_id.'/'.$co_id.'" method="post">
+						<div class="row bg-info">
+							<div class="form-group">
+								<input type="hidden" class="form-control" id="nickname" name="nickname" value="'.$this->session->userdata('username').'">
+								</input>
+							</div>
+							<div class="form-group">
+								<label for="comment"><span class="glyphicon glyphicon-comment"></span> comment</label>
+								<textarea class="form-control" id="comment" name="comment" rows="4"></textarea>
+							</div>
+							<button type="submit" class="btn btn-warning">작성</button>
+						</div>
+						</form>
+					</div>
+				</div>
+			</div>';
+		} else {
+			$make_comment .=
+				'</div>
+			</div>';
+		}
+	return $make_comment;
+	}
+
+	public function likeComment() {		/* 댓글 좋아요 기능 */
+		$co_id = $this->input->post('index');
+		$this->load->model('Comments_model');
+		
+		$liker = $this->Comments_model->likeComment($co_id);
+
+		echo '<button type="button" class="btn btn-primary" id="bu'.$co_id.'" onclick="likeComment('.$co_id.')">좋아요 <span class="badge">'.$liker->liker.'</span></button>';
+	}
+
+	public function addComment($index, $re_id) {	/* Comment 추가 */
+		if (!$this->session->userdata('is_login')){
+			$this->session->set_flashdata('message', '세션이 만료되었습니다.');
+		}
+
+		if (!$re_id) $re_id = 0;
+		$this->load->model('Comments_model');
+		if (!$this->Comments_model->addComment(
+			$index, 
+			$re_id,
+			$this->session->userdata('userid'), 
+			$this->input->post('nickname'),
+			$this->input->post('comment')
+			)) {
+			$this->session->set_flashdata('message', '등록 실패');
+		} else {
+			$this->session->set_flashdata('message', '코멘트가 등록되었습니다..');
+		}
+		redirect($returnURL ? $returnURL : site_url('/Hello'));
 	}
 }
 ?>

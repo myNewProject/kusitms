@@ -12,6 +12,12 @@ class Board_model extends CI_Model{
         return $this->db->query($strQuery)->result();
     }
 
+    function getItem($index) {
+         $strQuery = "SELECT id, category, title, content, attachment_org, attachment_file, writer, postDate, click FROM members_board WHERE id = ".$index;
+
+        return $this->db->query($strQuery)->row();
+    }
+
     function getBoard($category, $member){
         $strQuery = "SELECT id, category, title, writer, postDate, click FROM members_board WHERE category = ".$category." AND member = ".$member." ORDER BY id DESC";
 
@@ -22,6 +28,12 @@ class Board_model extends CI_Model{
         $strQuery = "SELECT id, title, content, writer, postDate FROM members_board WHERE category = ".$category." ORDER BY id DESC";
 
         return $this->db->query($strQuery)->result();
+    }
+
+    function getCountReply($index) {
+        $strQuery = "SELECT COUNT(co_id) as count FROM comments WHERE board_id = ".$index;
+
+        return $this->db->query($strQuery)->row();
     }
 
     function add($category, $title, $content, $writer, $member) {

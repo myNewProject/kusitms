@@ -32,36 +32,34 @@
 					</div>
 					<!--end news-tag-data-->
 					<div>
-						<p>
-							 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.
-						</p>
 						<blockquote class="hero">
 							<p>
+								<h3>임원진</h3>
 								 학회장 : <br>
 								 <?//학회장 가져오는 소스?>정용우(서울과기대)<br>
 								 부학회장 : <br>
 								 <?//부학회장 가져오는 소스?>김동후(한양대)<br>
 								 <br>
+								<h3>경영총괄팀</h3>
 								경영총괄팀 팀장 : <br>
-								<?//경총팀장 가져오는 소스?>이한들(세종대)<br>
+								<?//경총팀장 가져오는 소스?>이한들(세종대)<br><br>
 								경영총괄팀 팀원 : <br>
 								<?//경총팀원 가져오는 소스?>김나연(서울여대), 송소림(한국항공대), 유영수(남서울대), 이호정(숙명여대), 최재희(숙명여대)<br>
 								<br>
+								<h3>교육팀</h3>
 								교육팀 팀장 : <br>
-								<?//교육팀장 가져오는 소스?>김윤재(한양대)<br>
+								<?//교육팀장 가져오는 소스?>김윤재(한양대)<br><br>
 								교육팀 팀원 : <br>
 								<?//교육팀원 가져오는 소스?>김석현(동국대), 안혜린(동국대), 우지원(성신여대), 윤숙영 (성균관대), 이윤상(숭실대)<br>
 								<br>
+								<h3>대외홍보팀</h3>
 								대외홍보팀 팀장 : <br>
-								<?//대홍팀장 가져오는 소스?>신유선(단국대)<br>
+								<?//대홍팀장 가져오는 소스?>신유선(단국대)<br><br>
 								대외홍보팀 팀원 : <br>
 								<?//대홍팀원 가져오는 소스?>김효영(성신여대), 배희연(서울여대), 이정엽(남서울대)<br>
 							</p>
 							<small>전체 운영진 <cite title="Source Title"><한국대학생IT경영학회 11기></cite></small>
 						</blockquote>
-						<p>
-							 Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Eserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpa
-						</p>
 					</div>
 					<hr>
 				</div>

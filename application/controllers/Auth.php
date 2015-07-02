@@ -13,6 +13,10 @@ class Auth extends MY_Controller {
   }
 
   public function register() {
+    if ($this->session->userdata('is_login')) {
+      redirect(site_url('/Hello'));
+    }
+
     $this->_header('main-header');
 
     $this->load->library('form_validation');
@@ -29,7 +33,7 @@ class Auth extends MY_Controller {
     } else {
       // 프사 업로드
       $file = $this->upload_receive('picture');
-     
+     /*
      // 비밀번호 보안
       if(function_exists('password_hash')) {
         $this->load->helper('password');
@@ -51,7 +55,7 @@ class Auth extends MY_Controller {
         'age'=>$this->input->post('age')
         ));
       $this->session->set_flashdata('message', '회원가입에 성공했습니다.');
-      redirect(site_url('/Hello'));
+      redirect(site_url('/Hello'));*/
     }
 
 

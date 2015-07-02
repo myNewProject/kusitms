@@ -6,7 +6,7 @@
 	<div class="page-content">
 		<!-- BEGIN PAGE HEADER-->
 		<h3 class="page-title">
-		공지사항 <small><?=$category?></small>
+		검색 결과
 		</h3>
 		<div class="page-bar">
 			<ul class="page-breadcrumb">
@@ -16,19 +16,19 @@
 					<i class="fa fa-angle-right"></i>
 				</li>
 				<li>
-					<a href="<?=site_url('/Notice')?>/main_notice">전체공지</a>
+					<a href="<?=site_url('/SearchEngine')?>">검색</a>
 					<i class="fa fa-angle-right"></i>
 				</li>
 				<li>
-					<?=$_nav?>
+					<a href="<?=$_SERVER['PHP_SELF']?>">검색결과</a>
+					<i class="fa fa-angle-right"></i>
 				</li>
 			</ul>
 		</div>
 		<!-- END PAGE HEADER-->
 		<!-- BEGIN PAGE CONTENT-->
 		<div class="row">
-			<div class="col-md-1"></div>
-			<div class="col-md-10 news-page">
+			<div class="col-md-12 news-page">
 				<!-- BEGIN SAMPLE TABLE PORTLET-->
 				<div class="portlet box red">
 					<div class="portlet-title">
@@ -42,9 +42,15 @@
 					</div>
 					<div class="portlet-body">
 						<div class="table-scrollable">
-							<table class="table table-hover col-xs-12">
+							<table class="table table-striped table-bordered table advance table-hover col-xs-12">
 							<thead>
-							<?=$_header?>
+								<tr>
+									<th><i class="fa fa-tag"></i> 위치</th>
+									<th><i class="fa fa-file-text"></i> 제목</th>
+									<th><i class="fa fa-user"></i> 작성자</th>
+									<th><i class="fa fa-calendar"></i> 작성일</th>
+									<th><i class="fa fa-eye"></i> 조회수</th>
+								</tr>
 							</thead>
 							<tbody>
 							<?=$_board?>
@@ -56,7 +62,6 @@
 				</div>
 				<!-- END SAMPLE TABLE PORTLET-->
 			</div>
-			<div class="col-md-1"></div>
 		</div>
 	</div>
 </div>

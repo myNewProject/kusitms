@@ -19,37 +19,20 @@ class Notice extends MY_Controller {
 		// 교육일정
 		$_eduSchedule = $this->get_notice_intro(1);
 
-		// 멘토링 공지
-		$_mento = $this->get_notice_intro(2);
+		// 학회 공지사항
+		$_notice = $this->get_notice_intro(2);
 
 		// 동문회 공지
 		$_afterSociety = $this->get_notice_intro(3);
 
-		// 학회 공지사항
-		$_notice = $this->get_notice_intro(4);
+		// 멘토링 공지
+		$_mento = $this->get_notice_intro(4);
 
 		// 언론보도
 		$_extraBoard = $this->get_notice_intro(5);
 
 		$this->load->view('main_notice', array('_eduSchedule'=>$_eduSchedule, '_mento'=>$_mento, '_afterSociety'=>$_afterSociety, '_notice'=>$_notice, '_extraBoard'=>$_extraBoard));
 				
-		$this->_footer('main-footer');
-	}
-
-	public function kusitms_notice() {
-		$this->_header('main-header');
-
-		$this->load->model('notice_model');  // Model 가져오기
-
-		$_nav = "<a href='".site_url('/Notice')."/kusitms_notice'>학회 공지</a>";
-		$_category = "학회공지";
-
-		// 교육일정 가져오기
-		$all_result = $this->notice_model->getBoard(1);
-		$result = $this->make_board($all_result, 'kusitms_notice');
-
-		$this->load->view('notice_board', array('_nav'=>$_nav, 'category'=>$_category, '_header'=>$result['_header'], '_board'=>$result['_board'], '_footer'=>$result['_footer']));
-
 		$this->_footer('main-footer');
 	}
 
@@ -62,8 +45,25 @@ class Notice extends MY_Controller {
 		$_category = "교육일정";
 
 		// 교육일정 가져오기
-		$all_result = $this->notice_model->getBoard(2);
+		$all_result = $this->notice_model->getBoard(1);
 		$result = $this->make_board($all_result, 'edu_schedule');
+
+		$this->load->view('notice_board', array('_nav'=>$_nav, 'category'=>$_category, '_header'=>$result['_header'], '_board'=>$result['_board'], '_footer'=>$result['_footer']));
+
+		$this->_footer('main-footer');
+	}
+
+	public function kusitms_notice() {
+		$this->_header('main-header');
+
+		$this->load->model('notice_model');  // Model 가져오기
+
+		$_nav = "<a href='".site_url('/Notice')."/kusitms_notice'>학회 공지</a>";
+		$_category = "학회공지";
+
+		// 학회공지 가져오기
+		$all_result = $this->notice_model->getBoard(2);
+		$result = $this->make_board($all_result, 'kusitms_notice');
 
 		$this->load->view('notice_board', array('_nav'=>$_nav, 'category'=>$_category, '_header'=>$result['_header'], '_board'=>$result['_board'], '_footer'=>$result['_footer']));
 
@@ -95,7 +95,7 @@ class Notice extends MY_Controller {
 		$_nav = "<a href='".site_url('/Notice')."/diary'>활동일지</a>";
 		$_category = "활동일지";
 
-		// 언론 보도 자료 가져오기
+		// 활동일지 가져오기
 		$all_result = $this->notice_model->getBoard(4);
 		$result = $this->make_board($all_result, 'diary');
 
@@ -104,10 +104,44 @@ class Notice extends MY_Controller {
 		$this->_footer('main-footer');
 	} 
 
+	public function notice_item($index) {
+		$this->_header('main-header');
+
+		$this->load->model('notice_model');  // Model 가져오기
+		$result = $this->notice_model->getItem($index); // 공지글 가져오기
+
+		switch ($result->category) {
+		 	case 1:
+		 		$_category = "교육일정";
+		 		$_nav = "<a href='".site_url('/Notice')."/edu_schedule'>교육 일정</a>";
+		 		break;
+		 	case 2:
+		 		$_category = "학회공지";
+		 		$_nav = "<a href='".site_url('/Notice')."/kusitms_notice'>학회 공지</a>";
+		 		break;
+		 	case 3:
+		 		$_category = "언론보도";
+		 		$_nav = "<a href='".site_url('/Notice')."/abroad_notice'>언론보도</a>";
+		 		break;
+		 	case 4:
+		 		$_category = "활동일지";
+		 		$_nav = "<a href='".site_url('/Notice')."/diary'>활동일지</a>";
+		 		break;
+		 	default:
+		 		$_category = "교육일정";
+		 		$_nav = "<a href='".site_url('/Notice')."/edu_schedule'>교육 일정</a>";
+		 		break;
+		 }
+
+		$this->load->view('notice_item', array('_nav'=>$_nav, 'category'=>$_category, 'notice_item'=>$result));
+
+		$this->_footer('main-footer');
+	}
+
 	public function add() {
 		if (!$this->session->userdata('is_login')) {
 			$this->session->set_flashdata('message', '로그인이 필요한 서비스 입니다.');
-			redirect('/Auth/login?returnURL='.rawurlencode(site_url('/Hello/add')));
+			redirect($this->input->get('curl').'/#login_form');
 		}
 
 		if (!$this->session->userdata('postAuth')) {
@@ -186,7 +220,7 @@ class Notice extends MY_Controller {
 	public function make_board($all_result, $url) {
 		$_header = "<tr>
 					<th>
-						 분류
+						 글 번호
 					</th>
 					<th>
 						 제목
@@ -241,10 +275,10 @@ class Notice extends MY_Controller {
 				$_board .= "
 					<tr>
 						<td>
-							 ".$category."
+							 ".$id."
 						</td>
 						<td>
-							 ".$title."
+							<a href=".site_url('/Notice/notice_item')."/".$id.">".$title."</a>
 						</td>
 						<td>
 							 ".$writer."
@@ -256,6 +290,7 @@ class Notice extends MY_Controller {
 							".$click."
 						</td>
 					</tr>
+					</a>
 					";
 
 				$counter = $counter + 1;
@@ -301,8 +336,8 @@ class Notice extends MY_Controller {
 		return $return;
 	}
 
-	public function get_notice_intro($index) {
-		$all_result = $this->notice_model->gets($index);
+	public function get_notice_intro($category) {
+		$all_result = $this->notice_model->gets($category);
 		$_item = "";
 		if(!$all_result) {
 			$_item .= "
@@ -323,7 +358,7 @@ class Notice extends MY_Controller {
 				$_item .= "
 					<div class='news-blocks'>
 						<h3>
-						<a href='page_news_item.html'>
+						<a href='".site_url('/Notice/notice_item')."/".$id."'>
 						".$title." </a>
 						</h3>
 						<div class='news-block-tags'>
@@ -331,7 +366,7 @@ class Notice extends MY_Controller {
 							<em>".$postDate."</em>
 						</div>
 						".$content."
-						<a href='page_news_item.html' class='news-block-btn'>
+						<a href='".site_url('/Notice/notice_item').'/'.$id."' class='news-block-btn'>
 						Read more <i class='m-icon-swapright m-icon-black'></i>
 						</a>
 					</div>";

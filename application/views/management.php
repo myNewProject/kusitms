@@ -26,41 +26,45 @@
 			<div class="row margin-bottom-30">
 				<div class="col-md-2"></div>
 				<div class="col-md-8 article-block">
-					<h3>운영진 구성</h3>
-					<div>
-						<h4>교육팀</h4>
+					<h2>운영진 구성</h2>
+					<hr>
+					<div align="center">
+						<h3>교육팀</h3>
 						<p>
-							교육팀 소개, 하는일
+							<img src="<?=site_url('/static/img')?>/edu_team.png" width="350px" height="350px">
+							<br>교육팀로고 <cite title="Source Title">-by 신유선</cite>
 						</p>
 						<blockquote class="hero">
 							<p>
-								 교육팀로고 or 사진
+								 학회의 중심이 되는 교육 커리큘럼 기획 <br>
+								매주 교육을 준비하여 학술 활동 진행 및 학술제 기획
 							</p>
-							<small>교육팀 로고 <cite title="Source Title"><찍은날짜></cite></small>
 						</blockquote>
 
 						<hr>
-						<h4>경영총괄팀</h4>
+						<h3>경영총괄팀</h3>
 						<p>
-							경총팀 소개, 하는일
+							<img src="<?=site_url('/static/img')?>/manage_team.png" width="350px" height="350px">
+							<br>경총팀로고 <cite title="Source Title">-by 신유선</cite>
 						</p>
 						<blockquote class="hero">
 							<p>
-								 경총팀로고 or 사진
+								 강연회, 큐시즘데이 등 학회 내 행사 기획 및 회원 관리, 장소 섭외, 예산 관리 등 <br>
+								학회 활동 전반적인 부분 담당
 							</p>
-							<small>경총팀 로고 <cite title="Source Title"><찍은날짜></cite></small>
 						</blockquote>
 
 						<hr>
-						<h4>대외홍보팀</h4>
+						<h3>대외홍보팀</h3>
 						<p>
-							대홍팀 소개, 하는일
+							<img src="<?=site_url('/static/img')?>/promote_team.png" width="350px" height="350px">
+							<br>대홍팀로고 <cite title="Source Title">-by 신유선</cite>
 						</p>
 						<blockquote class="hero">
 							<p>
-								 대홍팀로고 or 사진
+								 매주 교육 커버 및 포스터, 팜플렛 등<br>
+								학회 내 디자인 전반 담당 및 학회 활동 홍보와 SNS 관리
 							</p>
-							<small>대홍팀 로고 <cite title="Source Title"><찍은날짜></cite></small>
 						</blockquote>
 					</div>
 					<hr>

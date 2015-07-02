@@ -14,7 +14,7 @@ class MY_Controller extends CI_Controller {
 		switch ($index) {
 			case 'main-header':
 				$this->load->view('main-head');
-				$this->load->view('main-header', array('member'=>$cMember[0]->member));
+				$this->load->view('main-header', array('member'=>$cMember->member));
 				break;
 			
 			default:

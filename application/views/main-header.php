@@ -33,7 +33,7 @@
 				</li>
 				<li class="mega-menu-dropdown">
 					<a data-toggle="dropdown" href="javascript:;" class="dropdown-toggle" data-hover="megamenu-dropdown" data-close-others="true">
-					학회소개 <i class="fa fa-angle-down"></i>
+					KUSITMS <i class="fa fa-angle-down"></i>
 					</a>
 					<ul class="dropdown-menu" style="min-width: 600px;">
 						<li>
@@ -55,7 +55,7 @@
 											</li>
 											<li>
 												<a href="<?=site_url('/Hello/about/management')?>">
-												<i class="fa fa-angle-right"></i>운영진 소개 <span class="badge badge-roundless badge-warning">update</span></a>
+												<i class="fa fa-angle-right"></i>운영진 구성 <span class="badge badge-roundless badge-warning">update</span></a>
 											</li>
 											<li>
 												<a href="<?=site_url('/Hello/about/history')?>">
@@ -97,7 +97,7 @@
 												<i class="fa fa-angle-right"></i>활동일지 </a>
 											</li>
 											<li>
-												<a href="<?=site_url('/Notice/add')?>">
+												<a href="<?=site_url('/Notice/add')?>?curl=<?=current_url()?>">
 												<i class="fa fa-angle-right"></i>공지 작성 </a>
 											</li>
 										</ul>
@@ -235,14 +235,14 @@
 											<li>
 												<h3>이전 기수</h3>
 											</li>
-											<? for ($i=1; $i < $member ; $i++) { 
-												# code...
-											?>
-											<li>
-												<a href="<?=site_url('/Members')?>/member_intro?member=<?=$i?>">
-												<i class="fa fa-angle-right"></i><?=$i?>기</a>
-											</li>
-											<?	}	?>
+											<script type="text/javascript">
+											var member = <?=$member?>;
+											for (var i=1; i < member ; i++) { 
+												document.write("<li><a href='<?=site_url('/Members/member_intro?member')?>="+ i + "'>");
+												document.write("<i class='fa fa-angle-right'></i>"+ i +"기</a></li>");
+											}
+											</script>
+												
 										</ul>
 									</div>
 								</div>
@@ -711,7 +711,7 @@
 				</li>
 				<li>
 					<a href="#">
-					학회소개 <span class="arrow"></span></a>
+					KUSITMS <span class="arrow"></span></a>
 					<ul class="sub-menu">
 						<li>
 							<a href="<?=site_url('/Hello/about/about')?>">
@@ -727,7 +727,7 @@
 								</li>
 								<li>
 									<a href="<?=site_url('/Hello/about/management')?>">
-									운영진 소개 </a>
+									운영진 구성 </a>
 								</li>
 								<li>
 									<a href="<?=site_url('/Hello/about/history')?>">
@@ -803,7 +803,7 @@
 				</li>
 				<li>
 					<a href="#">
-					11기 <span class="arrow"></span></a>
+					<?=$member?>기 <span class="arrow"></span></a>
 					<ul class="sub-menu">
 						<li>
 							<a href="#">
@@ -899,14 +899,12 @@
 							</span>
 							</a>
 							<ul class="sub-menu">
-								<? for ($i=1; $i < $member ; $i++) { 
-									# code...
-								?>
-								<li>
-									<a href="<?=site_url('/Members')?>/member_intro?member=<?=$i?>">
-									<?=$i?>기</a>
-								</li>
-								<?	}	?>
+								<script>
+									var member = <?=$member?>;
+									for (var i=1; i < member ; i++) { 
+										document.write(" <li>	<a href='<?=site_url('/Members/member_intro?member')?>= " + i + "'>"+ i +"기</a></li>");
+									}
+								</script>
 							</ul>
 						</li>
 					</ul>

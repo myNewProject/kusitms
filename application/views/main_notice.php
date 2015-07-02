@@ -81,30 +81,30 @@
 							<div class='top-news margin-top-10'>
 								<a href='<?=site_url('/Notice')?>/edu_schedule' class='btn blue'>
 								<span>
-								교육 일정 News </span>
+								교육 일정 공지 </span>
 								<em>
 								<i class='fa fa-tags'></i>
 								교육팀 주관 매주토요일 교육 </em>
-								<i class='fa fa- icon-bullhorn top-news-icon'></i>
+								<i class='fa fa-calendar top-news-icon'></i>
 								</a>
 							</div>
 							<? echo $_eduSchedule; ?>
-							<button type="button" class="btn btn-primary" href="#">교육일정 보기</button>
+							<a type="button" class="btn btn-primary" href="<?=site_url('/Notice')?>/edu_schedule">교육일정 보기</a>
 						</div>
 						<!--end col-md-4-->
 						<div class="col-md-4">
 							<div class="top-news margin-top-10">
 								<a href="#" class="btn red">
 								<span>
-								멘토링 News </span>
+								멘토링 공지 </span>
 								<em>
 								<i class="fa fa-tags"></i>
 								동문회 주관 멘토링 </em>
-								<i class="fa fa-globe top-news-icon"></i>
+								<i class="fa fa-comment top-news-icon"></i>
 								</a>
 							</div>
 							<? echo $_mento; ?>
-							<button type="button" class="btn btn-primary" href="#">멘토링 전체 보기</button>
+							<a type="button" class="btn btn-primary" href="#">멘토링 전체 보기</a>
 
 							<div class="top-news margin-top-10">
 								<a href="#" class="btn green">
@@ -117,7 +117,7 @@
 								</a>
 							</div>
 							<? echo $_afterSociety; ?>
-							<button type="button" class="btn btn-primary" href="#">동문회 공지 보기</button>
+							<a type="button" class="btn btn-primary" href="#">동문회 공지 보기</a>
 						</div>
 						<!--end col-md-4-->
 						<div class="col-md-4">
@@ -128,11 +128,11 @@
 								<em>
 								<i class="fa fa-tags"></i>
 								한국대학생IT경영학회 공지사항 </em>
-								<i class="fa fa-beaker top-news-icon"></i>
+								<i class="fa fa-info top-news-icon"></i>
 								</a>
 							</div>
 							<? echo $_notice; ?>
-							<button type="button" class="btn btn-primary" href="#">학회 공지 보기</button>
+							<a type="button" class="btn btn-primary" href="<?=site_url('/Notice')?>/kusitms_notice">학회 공지 보기</a>
 
 							<div class="top-news margin-top-10">
 								<a href="<?=site_url('/Notice')?>/abroad_notice" class="btn yellow">
@@ -141,11 +141,11 @@
 								<em>
 								<i class="fa fa-tags"></i>
 								학회 외부 언론 보도자료 </em>
-								<i class="fa fa-trophy top-news-icon"></i>
+								<i class="fa fa-microphone top-news-icon"></i>
 								</a>
 							</div>
 							<? echo $_extraBoard; ?>
-							<button type="button" class="btn btn-primary" href="#">보도 자료 보기</button>
+							<a type="button" class="btn btn-primary" href="<?=site_url('/Notice')?>/abroad_notice">보도 자료 보기</a>
 						</div>
 						<!--end col-md-4-->
 					</div>

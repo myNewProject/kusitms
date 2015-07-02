@@ -6,7 +6,7 @@
 	<div class="page-content">
 		<!-- BEGIN PAGE HEADER-->
 		<h3 class="page-title">
-		공지사항 <small><?=$category?></small>
+		기수별 게시판 <small><?=$category?></small>
 		</h3>
 		<div class="page-bar">
 			<ul class="page-breadcrumb">
@@ -16,7 +16,7 @@
 					<i class="fa fa-angle-right"></i>
 				</li>
 				<li>
-					<a href="<?=site_url('/Notice')?>/main_notice">전체공지</a>
+					<a href="<?=site_url('/Members/member_intro')?>?member=<?=$member?>"><?=$member?>기</a>
 					<i class="fa fa-angle-right"></i>
 				</li>
 				<li>
