@@ -149,30 +149,30 @@
 												<h3>회원 소개</h3>
 											</li>
 											<li>
-												<a href="<?=site_url('/Members')?>/member_intro?member=<?=$member?>">
+												<a href="<?=site_url('/Board')?>/member_intro?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>회원 소개 </a>
 											</li>
 											<li>
-												<a href="<?=site_url('/Members')?>/member_intro?member=<?=$member?>">
+												<a href="<?=site_url('/Board')?>/member_intro?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>회원 조직도 </a>
 											</li>
 											<li>
-												<a href="<?=site_url('/Members')?>/member_intro?member=<?=$member?>">
+												<a href="<?=site_url('/Board')?>/member_intro?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>교육 일정</a>
 											</li><br>
 											<li>
 												<h3>운영진 게시판</h3>
 											</li>
 											<li>
-												<a href="<?=site_url('/Members')?>/edu_team?member=<?=$member?>">
+												<a href="<?=site_url('/Board')?>/edu_team?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>교육팀<span class="badge badge-roundless badge-warning">new</span></a>
 											</li>
 											<li>
-												<a href="<?=site_url('/Members')?>/management_team?member=<?=$member?>">
+												<a href="<?=site_url('/Board')?>/management_team?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>경영총괄팀<span class="badge badge-roundless badge-warning">new</span></a>
 											</li>
 											<li>
-												<a href="<?=site_url('/Members')?>/promote_team?member=<?=$member?>">
+												<a href="<?=site_url('/Board')?>/promote_team?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>대외홍보팀</a>
 											</li>
 										</ul>
@@ -183,35 +183,35 @@
 												<h3>조별 게시판</h3>
 											</li>
 											<li>
-												<a href="<?=site_url('/Members')?>/team_board/1?member=<?=$member?>">
+												<a href="<?=site_url('/Board')?>/team_board/1?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>일일호프 조</a>
 											</li>
 											<li>
-												<a href="<?=site_url('/Members')?>/team_board/2?member=<?=$member?>">
+												<a href="<?=site_url('/Board')?>/team_board/2?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>투미닛 조</a>
 											</li>
 											<li>
-												<a href="<?=site_url('/Members')?>/team_board/3?member=<?=$member?>">
+												<a href="<?=site_url('/Board')?>/team_board/3?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>보람삼 조</a>
 											</li>
 											<li>
-												<a href="<?=site_url('/Members')?>/team_board/4?member=<?=$member?>">
+												<a href="<?=site_url('/Board')?>/team_board/4?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>사겨 조</a>
 											</li>
 											<li>
-												<a href="<?=site_url('/Members')?>/team_board/5?member=<?=$member?>">
+												<a href="<?=site_url('/Board')?>/team_board/5?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>오구오구 조</a>
 											</li>
 											<li>
-												<a href="<?=site_url('/Members')?>/team_board/6?member=<?=$member?>">
+												<a href="<?=site_url('/Board')?>/team_board/6?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>육감적인 조</a>
 											</li>
 											<li>
-												<a href="<?=site_url('/Members')?>/team_board/7?member=<?=$member?>">
+												<a href="<?=site_url('/Board')?>/team_board/7?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>두마리토끼를 잡 조</a>
 											</li>
 											<li>
-												<a href="<?=site_url('/Members')?>/team_board/8?member=<?=$member?>">
+												<a href="<?=site_url('/Board')?>/team_board/8?member=<?=$member?>">
 												<i class="fa fa-angle-right"></i>팔루미 조</a>
 											</li>
 										</ul>
@@ -238,7 +238,7 @@
 											<script type="text/javascript">
 											var member = <?=$member?>;
 											for (var i=1; i < member ; i++) { 
-												document.write("<li><a href='<?=site_url('/Members/member_intro?member')?>="+ i + "'>");
+												document.write("<li><a href='<?=site_url('/Board/member_intro?member')?>="+ i + "'>");
 												document.write("<i class='fa fa-angle-right'></i>"+ i +"기</a></li>");
 											}
 											</script>
@@ -586,8 +586,8 @@
 							<i class="icon-user"></i> My Profile </a>
 						</li>
 						<li>
-							<a href="page_calendar.html">
-							<i class="icon-calendar"></i> My Calendar </a>
+							<a href="<?=site_url('/attendance/admin')?>?curl=<?=current_url()?>">
+							<i class="icon-calendar"></i> 출석부 </a>
 						</li>
 						<li>
 							<a href="inbox.html">
@@ -812,15 +812,15 @@
 							</a>
 							<ul class="sub-menu">
 								<li>
-									<a href="<?=site_url('/Members')?>/member_intro?member=<?=$member?>">
+									<a href="<?=site_url('/Board')?>/member_intro?member=<?=$member?>">
 									회원 소개 </a>
 								</li>
 								<li>
-									<a href="<?=site_url('/Members')?>/member_intro?member=<?=$member?>">
+									<a href="<?=site_url('/Board')?>/member_intro?member=<?=$member?>">
 									회원 조직도 </a>
 								</li>
 								<li>
-									<a href="<?=site_url('/Members')?>/member_intro?member=<?=$member?>">
+									<a href="<?=site_url('/Board')?>/member_intro?member=<?=$member?>">
 									교육 일정 </a>
 								</li>
 							</ul>
@@ -832,15 +832,15 @@
 							</a>
 							<ul class="sub-menu">
 								<li>
-									<a href="<?=site_url('/Members')?>/edu_team?member=<?=$member?>">
+									<a href="<?=site_url('/Board')?>/edu_team?member=<?=$member?>">
 									교육팀 </a>
 								</li>
 								<li>
-									<a href="<?=site_url('/Members')?>/management_team?member=<?=$member?>">
+									<a href="<?=site_url('/Board')?>/management_team?member=<?=$member?>">
 									경영총괄팀 </a>
 								</li>
 								<li>
-									<a href="<?=site_url('/Members')?>/promote_team?member=<?=$member?>">
+									<a href="<?=site_url('/Board')?>/promote_team?member=<?=$member?>">
 									대외홍보팀 </a>
 								</li>
 							</ul>
@@ -852,35 +852,35 @@
 							</a>
 							<ul class="sub-menu">
 								<li>
-									<a href="<?=site_url('/Members')?>/team_board/1?member=<?=$member?>">
+									<a href="<?=site_url('/Board')?>/team_board/1?member=<?=$member?>">
 									일일호프 조 </a>
 								</li>
 								<li>
-									<a href="<?=site_url('/Members')?>/team_board/2?member=<?=$member?>">
+									<a href="<?=site_url('/Board')?>/team_board/2?member=<?=$member?>">
 									투미닛 조 </a>
 								</li>
 								<li>
-									<a href="<?=site_url('/Members')?>/team_board/3?member=<?=$member?>">
+									<a href="<?=site_url('/Board')?>/team_board/3?member=<?=$member?>">
 									보람삼 조 </a>
 								</li>
 								<li>
-									<a href="<?=site_url('/Members')?>/team_board/4?member=<?=$member?>">
+									<a href="<?=site_url('/Board')?>/team_board/4?member=<?=$member?>">
 									사겨 조 </a>
 								</li>
 								<li>
-									<a href="<?=site_url('/Members')?>/team_board/5?member=<?=$member?>">
+									<a href="<?=site_url('/Board')?>/team_board/5?member=<?=$member?>">
 									오구오구 조 </a>
 								</li>
 								<li>
-									<a href="<?=site_url('/Members')?>/team_board/6?member=<?=$member?>">
+									<a href="<?=site_url('/Board')?>/team_board/6?member=<?=$member?>">
 									육감적인 조 </a>
 								</li>
 								<li>
-									<a href="<?=site_url('/Members')?>/team_board/7?member=<?=$member?>">
+									<a href="<?=site_url('/Board')?>/team_board/7?member=<?=$member?>">
 									두마리토끼를 잡 조 </a>
 								</li>
 								<li>
-									<a href="<?=site_url('/Members')?>/team_board/8?member=<?=$member?>">
+									<a href="<?=site_url('/Board')?>/team_board/8?member=<?=$member?>">
 									팔루미 조 </a>
 								</li>
 							</ul>
@@ -902,7 +902,7 @@
 								<script>
 									var member = <?=$member?>;
 									for (var i=1; i < member ; i++) { 
-										document.write(" <li>	<a href='<?=site_url('/Members/member_intro?member')?>= " + i + "'>"+ i +"기</a></li>");
+										document.write(" <li>	<a href='<?=site_url('/Board/member_intro?member')?>= " + i + "'>"+ i +"기</a></li>");
 									}
 								</script>
 							</ul>

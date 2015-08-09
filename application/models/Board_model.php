@@ -54,7 +54,7 @@ class Board_model extends CI_Model{
 //    function addFile($category, $title, $content, $attachment_org, $attachment_file) {
         $this->db->set('postDate', 'CURRENT_TIMESTAMP()', false);
         $this->db->insert('members_board', array(
-            'category'=>$category,
+            'category'=>(int)$category,
             'title'=>$title,
             'content'=>$content,
             'writer'=>$writer,

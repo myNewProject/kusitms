@@ -13,7 +13,7 @@
 					<i class="fa fa-angle-right"></i>
 				</li>
 				<li>
-					<a href="<?=site_url('/Members/member_intro')?>?member=<?=$member?>"><?=$member?>기</a>
+					<a href="<?=site_url('/Board/member_intro')?>?member=<?=$member?>"><?=$member?>기</a>
 					<i class="fa fa-angle-right"></i>
 				</li>
 				<li>
@@ -21,7 +21,7 @@
 					<i class="fa fa-angle-right"></i>
 				</li>
 				<li>
-					<a href="<?=site_url('/Members/board_item')?>/<?=$board_item->id?>?member=<?=$member?>">게시글 보기</a>
+					<a href="<?=site_url('/Board/board_item')?>/<?=$board_item->id?>?member=<?=$member?>">게시글 보기</a>
 				</li>
 			</ul>
 		</div>
@@ -66,7 +66,7 @@
 						</div>
 						<!-- BEGIN COMMENTS POST -->
 						<? if ($this->session->userdata('is_login')) {	?>
-							<form action="<?=site_url('/Members/addComment')?>/<?=$board_item->id?><?=empty($returnURL) ? '' : '?returnURL='.rawurlencode($returnURL) ?>" method="post">
+							<form action="<?=site_url('/Board/addComment')?>/<?=$board_item->id?>?returnURL=<?=current_url()?>" method="post">
 							<div class="col-md-12 bg-info" style="margin-top:30px">
 								<div class="form-group">
 									<input type="hidden" class="form-control" id="nickname" name="nickname" value="<?=$this->session->userdata('username')?>" readonly></input>
@@ -93,7 +93,7 @@
 <script type="text/javascript">
 	// 댓글 좋아요
 	function likeComment (id) {
-		$.post("<?=site_url('/Members')?>/likeComment", 
+		$.post("<?=site_url('/Board')?>/likeComment", 
 			{ index: id }, 
 			function(result) {
 				alert("좋아요를 눌렀습니다..");
@@ -105,7 +105,7 @@
 		
 		$.ajax({
 			type: 'POST',
-			url: "<?=site_url('/Members')?>/likeComment", 
+			url: "<?=site_url('/Board')?>/likeComment", 
 			data: { index: id },
 			cache: false,
 			async: false

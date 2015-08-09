@@ -1,5 +1,5 @@
 <?php
-class Member_model extends CI_Model{
+class Users_model extends CI_Model{
  
     function __construct()
     {
@@ -18,7 +18,7 @@ class Member_model extends CI_Model{
         return $this->db->query($strQuery)->row();
     }
  
-    function get_member ($seq){
+    function get_user ($seq){
          $strQuery = "SELECT id, name, university, email, phone, class, picture, ment FROM users WHERE class in('학회장', '부학회장', '교육팀장', '경영총괄팀장', '대외홍보팀장') AND member = ".$seq;
  
         return $this->db->query($strQuery)->result();
@@ -43,8 +43,17 @@ class Member_model extends CI_Model{
 		$this->db->select('UNIX_TIMESTAMP(regdate) AS created');
         return $this->db->get_where('about_us',array('seq'=>$seq))->row();
     }
+
+    function get_last_id() {
+        $strQuery = "SELECT MAX(id) as last_id FROM users";
+        $result = $this->db->query($strQuery)->result();
+        return $result[0]->last_id;
+    }
 	
     function add($option) {
+        $last_id = $this->get_last_id();
+        $last_id += 1;
+        
         $this->db->set('name', $option['name']);
         $this->db->set('pass', $option['password']);
         $this->db->set('university', $option['university']);
@@ -53,7 +62,7 @@ class Member_model extends CI_Model{
         $this->db->set('phone', $option['phone']);
         $this->db->set('ment', $option['ment']);
         $this->db->set('member', $option['member']);
-        $this->db->set('picture', $option['picture']);
+        $this->db->set('picture', $last_id.$option['picture']);
         $this->db->set('age', $option['age']);
         $this->db->insert('users');
         $result = $this->db->insert_id();

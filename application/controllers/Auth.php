@@ -32,8 +32,9 @@ class Auth extends MY_Controller {
       $this->load->view('register');    
     } else {
       // 프사 업로드
+      //$this->input
       $file = $this->upload_receive('picture');
-     /*
+     
      // 비밀번호 보안
       if(function_exists('password_hash')) {
         $this->load->helper('password');
@@ -41,8 +42,8 @@ class Auth extends MY_Controller {
       $hash = password_hash($this->input->post('password'), PASSWORD_BCRYPT);
 
       // 데이터베이스 업로드
-      $this->load->model('member_model');
-      $this->member_model->add(array(
+      $this->load->model('users_model');
+      $this->users_model->add(array(
         'name'=>$this->input->post('name'),
         'university'=>$this->input->post('university'),
         'email'=>$this->input->post('email'),
@@ -51,11 +52,11 @@ class Auth extends MY_Controller {
         'class'=>$this->input->post('class'),
         'ment'=>$this->input->post('ment'),
         'member'=>$this->input->post('member'),
-        'picture'=>$file['file_name'],
+        'picture'=>$file['file_ext'],
         'age'=>$this->input->post('age')
         ));
       $this->session->set_flashdata('message', '회원가입에 성공했습니다.');
-      redirect(site_url('/Hello'));*/
+      redirect(site_url('/Hello'));
     }
 
 
@@ -63,8 +64,8 @@ class Auth extends MY_Controller {
   }
 
   public function authentication() {  // 로그인
-    $this->load->model('member_model');
-    $user = $this->member_model->getByEmail(array('email'=>$this->input->post('email')));
+    $this->load->model('users_model');
+    $user = $this->users_model->getByEmail(array('email'=>$this->input->post('email')));
     if(function_exists('password_hash')) {
       $this->load->helper('password');
     }
@@ -92,14 +93,17 @@ class Auth extends MY_Controller {
   }
 
   public function upload_receive($file_name) {
+    $this->load->model('users_model');
     // 사용자가 업로드 한 파일을 /static/img/member 디렉토리에 저장한다.
     $config['upload_path'] = './static/img/member';
     // 허용되는 파일의 최대 사이즈 (100MB)
     $config['max_size'] = '102400';
     // 허용되는 파일 종류 'gif|jpg|png'
     $config['allowed_types'] = 'gif|jpg|png';
+    // 파일명 변경
+    $config['file_name'] = $this->users_model->get_last_id()+1;
     // 파일명 암호화 True
-    $config['encrypt_name'] = TRUE;
+    //$config['encrypt_name'] = TRUE;
     
     $this->load->library('upload', $config);
 

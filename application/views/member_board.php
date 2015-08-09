@@ -16,7 +16,7 @@
 					<i class="fa fa-angle-right"></i>
 				</li>
 				<li>
-					<a href="<?=site_url('/Members/member_intro')?>?member=<?=$member?>"><?=$member?>기</a>
+					<a href="<?=site_url('/Board/member_intro')?>?member=<?=$member?>"><?=$member?>기</a>
 					<i class="fa fa-angle-right"></i>
 				</li>
 				<li>
@@ -29,6 +29,8 @@
 		<div class="row">
 			<div class="col-md-1"></div>
 			<div class="col-md-10 news-page">
+				
+				<a type='button' class='btn btn-primary' href="<?=site_url('/Board')?>/add?member=<?=$member?>">글작성</a>
 				<!-- BEGIN SAMPLE TABLE PORTLET-->
 				<div class="portlet box red">
 					<div class="portlet-title">

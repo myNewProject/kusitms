@@ -20,11 +20,11 @@ class Hello extends MY_Controller {
 
 		$this->_header('main-header');
 
-		$this->load->model('member_model');
+		$this->load->model('users_model');
 		switch ($index) {
 			case 'about':	// 학회소개
-				$cMember = $this->member_model->get_current_member();
-				$member_item = $this->member_model->get_member($cMember->member);
+				$cMember = $this->users_model->get_current_member();
+				$member_item = $this->users_model->get_user($cMember->member);
 				$this->load->view('about', array('member_item'=>$member_item));
 				break;
 			
@@ -49,7 +49,7 @@ class Hello extends MY_Controller {
 				break;
 
 			default:
-				$member_item = $this->member_model->gets();
+				$member_item = $this->users_model->gets();
 				$this->load->view('about', array('member_item'=>$member_item));
 				break;
 		}

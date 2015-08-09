@@ -27,7 +27,8 @@ class Comments_model extends CI_Model{
         return $this->db->query($strQuery)->row();
     }
     
-    public function addComment($board_id, $re_id, $userID, $nickname, $comment) {
+    public function addComment($board_id, $re_id, $userID, $nickname, $comment) {  
+        // SQL injection 방지코드로 변경할 것
         if ($re_id === 0)
             $strQuery = "INSERT INTO comments (board_id, uid, nickname, comment) VALUES ('".$board_id."', '".$userID."', '".$nickname."', '".$comment."')";
         else 
