@@ -24,7 +24,7 @@ class Attendance_model extends CI_Model{
             'user_id'=>$id,
             'check_in'=>$check_in,
             'member'=>$member,
-            'week'=>$week
+            'week'=>(int)$week
         ));
         
         return $this->db->insert_id();

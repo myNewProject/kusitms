@@ -24,29 +24,33 @@
 		<!-- END PAGE HEADER-->
 		<!-- BEGIN PAGE CONTENT-->
 		<div class="row margin-bottom-30">
-			<table class="table table-striped">
- 				<thead>
- 					<tr>
- 						<th>이름</th>
- 						<th>1주차</th>
- 						<th>2주차</th>
- 						<th>3주차</th>
- 						<th>4주차</th>
- 						<th>5주차</th>
- 						<th>6주차</th>
- 						<th>7주차</th>
- 						<th>8주차</th>
- 						<th>9주차</th>
- 						<th>10주차</th>
- 						<th>11주차</th>
- 						<th>12주차</th>
- 					</tr>
- 				</thead>
- 				<tbody>
- 					<!-- 출석 확인 -->
- 					<?=$attend_result?>
- 				</tbody>
-			</table>
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+				<table class="table table-striped">
+	 				<thead>
+	 					<tr>
+	 						<th>이름</th>
+	 						<th>1주차</th>
+	 						<th>2주차</th>
+	 						<th>3주차</th>
+	 						<th>4주차</th>
+	 						<th>5주차</th>
+	 						<th>6주차</th>
+	 						<th>7주차</th>
+	 						<th>8주차</th>
+	 						<th>9주차</th>
+	 						<th>10주차</th>
+	 						<th>11주차</th>
+	 						<th>12주차</th>
+	 					</tr>
+	 				</thead>
+	 				<tbody>
+	 					<!-- 출석 확인 -->
+	 					<?=$attend_result?>
+	 				</tbody>
+				</table>
+			</div>
+			<div class="col-md-1"></div>
 		</div>
 		<!--/row-->
 		<!-- END PAGE CONTENT-->

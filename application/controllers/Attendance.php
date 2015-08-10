@@ -31,11 +31,12 @@ class Attendance extends MY_Controller {
 
 		while (!empty($attend_result)) {
 			for ($i=0; $i<13; $i++) {
-				echo $attend->week;
 				if ($i==0) {
-					$attendent .= "<tr><td>".$attend->user_id."</td>"; 
+					$attendent .= "<tr><td>".$this->users_model->get_name($attend->user_id)[0]->name."</td>"; 
 				} else {
-					if ($attend->week != $i) {
+					if (empty($attend->week)) {
+						$attendent .= "<td>x</td>";
+					} else if ($attend->week != $i) {
 						$attendent .= "<td>x</td>";
 					} else {
 						$attendent .= "<td>".$attend->check_in."</td>";
